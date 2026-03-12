@@ -603,8 +603,8 @@ accounts:
     default_author: Author Name
     need_open_comment: 1
     only_fans_can_comment: 0
-    app_id: wx1234567890abcdef
-    app_secret: your_app_secret_here
+    app_id: your_wechat_app_id
+    app_secret: your_wechat_app_secret
   - name: AI Newsletter
     alias: ai-news
     default_publish_method: browser

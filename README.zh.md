@@ -603,8 +603,8 @@ accounts:
     default_author: 宝玉
     need_open_comment: 1
     only_fans_can_comment: 0
-    app_id: wx1234567890abcdef
-    app_secret: 你的 AppSecret
+    app_id: 你的微信AppID
+    app_secret: 你的微信AppSecret
   - name: AI 工具集
     alias: ai-tools
     default_publish_method: browser

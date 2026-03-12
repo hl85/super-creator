@@ -125,8 +125,8 @@ accounts:
     default_author: 宝玉
     need_open_comment: 1
     only_fans_can_comment: 0
-    app_id: wx1234567890abcdef
-    app_secret: abc123secret456
+    app_id: your_wechat_app_id
+    app_secret: your_wechat_app_secret
   - name: AI工具集
     alias: ai-tools
     default_publish_method: browser
@@ -176,12 +176,12 @@ For a selected account with alias `{alias}`:
 
 ```bash
 # Account: baoyu
-WECHAT_BAOYU_APP_ID=wx1234567890abcdef
-WECHAT_BAOYU_APP_SECRET=abc123secret456
+WECHAT_BAOYU_APP_ID=your_wechat_app_id
+WECHAT_BAOYU_APP_SECRET=your_wechat_app_secret
 
 # Account: ai-tools
-WECHAT_AI_TOOLS_APP_ID=wxabcdef1234567890
-WECHAT_AI_TOOLS_APP_SECRET=def789secret012
+WECHAT_AI_TOOLS_APP_ID=your_ai_tools_wechat_app_id
+WECHAT_AI_TOOLS_APP_SECRET=your_ai_tools_wechat_app_secret
 ```
 
 ### Chrome Profile (Browser Method)
