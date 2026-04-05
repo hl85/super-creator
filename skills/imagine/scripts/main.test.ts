@@ -70,7 +70,7 @@ async function makeTempDir(prefix: string): Promise<string> {
   return fs.mkdtemp(path.join(os.tmpdir(), prefix));
 }
 
-test("parseArgs parses the main baoyu-imagine CLI flags", () => {
+test("parseArgs parses the main imagine CLI flags", () => {
   const args = parseArgs([
     "--promptfiles",
     "prompts/system.md",
@@ -172,11 +172,11 @@ batch:
 });
 
 test("loadExtendConfig ignores legacy EXTEND.md when the new path is missing", async () => {
-  const root = await makeTempDir("baoyu-imagine-extend-");
+  const root = await makeTempDir("imagine-extend-");
   const cwd = path.join(root, "project");
   const home = path.join(root, "home");
   const legacyPath = path.join(cwd, ".baoyu-skills", "baoyu-image-gen", "EXTEND.md");
-  const currentPath = path.join(cwd, ".baoyu-skills", "baoyu-imagine", "EXTEND.md");
+  const currentPath = path.join(cwd, ".baoyu-skills", "imagine", "EXTEND.md");
 
   await fs.mkdir(path.dirname(legacyPath), { recursive: true });
   await fs.mkdir(home, { recursive: true });
@@ -194,11 +194,11 @@ default_quality: 2k
 });
 
 test("loadExtendConfig leaves legacy EXTEND.md untouched when both paths exist", async () => {
-  const root = await makeTempDir("baoyu-imagine-extend-dual-");
+  const root = await makeTempDir("imagine-extend-dual-");
   const cwd = path.join(root, "project");
   const home = path.join(root, "home");
   const legacyPath = path.join(cwd, ".baoyu-skills", "baoyu-image-gen", "EXTEND.md");
-  const currentPath = path.join(cwd, ".baoyu-skills", "baoyu-imagine", "EXTEND.md");
+  const currentPath = path.join(cwd, ".baoyu-skills", "imagine", "EXTEND.md");
 
   await fs.mkdir(path.dirname(legacyPath), { recursive: true });
   await fs.mkdir(path.dirname(currentPath), { recursive: true });
@@ -404,7 +404,7 @@ test("batch worker and provider-rate-limit configuration prefer env over EXTEND 
 });
 
 test("loadBatchTasks and createTaskArgs resolve batch-relative paths", async (t) => {
-  const root = await makeTempDir("baoyu-imagine-batch-");
+  const root = await makeTempDir("imagine-batch-");
   t.after(() => fs.rm(root, { recursive: true, force: true }));
 
   const batchFile = path.join(root, "jobs", "batch.json");

@@ -35,25 +35,25 @@ Check EXTEND.md existence (priority order):
 
 ```bash
 # macOS, Linux, WSL, Git Bash
-test -f .baoyu-skills/baoyu-post-to-wechat/EXTEND.md && echo "project"
-test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-post-to-wechat/EXTEND.md" && echo "xdg"
-test -f "$HOME/.baoyu-skills/baoyu-post-to-wechat/EXTEND.md" && echo "user"
+test -f .baoyu-skills/post-to-wechat/EXTEND.md && echo "project"
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/post-to-wechat/EXTEND.md" && echo "xdg"
+test -f "$HOME/.baoyu-skills/post-to-wechat/EXTEND.md" && echo "user"
 ```
 
 ```powershell
 # PowerShell (Windows)
-if (Test-Path .baoyu-skills/baoyu-post-to-wechat/EXTEND.md) { "project" }
+if (Test-Path .baoyu-skills/post-to-wechat/EXTEND.md) { "project" }
 $xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
-if (Test-Path "$xdg/baoyu-skills/baoyu-post-to-wechat/EXTEND.md") { "xdg" }
-if (Test-Path "$HOME/.baoyu-skills/baoyu-post-to-wechat/EXTEND.md") { "user" }
+if (Test-Path "$xdg/baoyu-skills/post-to-wechat/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.baoyu-skills/post-to-wechat/EXTEND.md") { "user" }
 ```
 
 ┌────────────────────────────────────────────────────────┬───────────────────┐
 │                          Path                          │     Location      │
 ├────────────────────────────────────────────────────────┼───────────────────┤
-│ .baoyu-skills/baoyu-post-to-wechat/EXTEND.md           │ Project directory │
+│ .baoyu-skills/post-to-wechat/EXTEND.md           │ Project directory │
 ├────────────────────────────────────────────────────────┼───────────────────┤
-│ $HOME/.baoyu-skills/baoyu-post-to-wechat/EXTEND.md     │ User home         │
+│ $HOME/.baoyu-skills/post-to-wechat/EXTEND.md     │ User home         │
 └────────────────────────────────────────────────────────┴───────────────────┘
 
 ┌───────────┬───────────────────────────────────────────────────────────────────────────┐

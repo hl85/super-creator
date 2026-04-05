@@ -199,7 +199,7 @@ Max Concurrent: 5 (Wave 5)
 
 ## TODOs
 
-- [ ] 1. Delete deprecated baoyu-image-gen skill
+- [x] 1. Delete deprecated baoyu-image-gen skill
 
   **What to do**:
   - 删除整个 `skills/baoyu-image-gen/` 目录（`rm -rf skills/baoyu-image-gen`）
@@ -266,7 +266,7 @@ Max Concurrent: 5 (Wave 5)
   - Files: `skills/baoyu-image-gen/`, `.claude-plugin/marketplace.json`, `skills/baoyu-imagine/scripts/main.ts`, `CLAUDE.md`, `docs/image-generation.md`
   - Pre-commit: `npm test`
 
-- [ ] 2. Rename package baoyu-md → sc-md
+- [x] 2. Rename package baoyu-md → sc-md
 
   **What to do**:
   - `git mv packages/baoyu-md packages/sc-md`
@@ -331,7 +331,7 @@ Max Concurrent: 5 (Wave 5)
   - Files: `packages/sc-md/`
   - Pre-commit: `npm test`
 
-- [ ] 3. Rename package baoyu-fetch → sc-fetch
+- [x] 3. Rename package baoyu-fetch → sc-fetch
 
   **What to do**:
   - `git mv packages/baoyu-fetch packages/sc-fetch`
@@ -387,7 +387,7 @@ Max Concurrent: 5 (Wave 5)
   - Files: `packages/sc-fetch/`
   - Pre-commit: `npm test`
 
-- [ ] 4. Rename package baoyu-chrome-cdp → sc-chrome-cdp
+- [x] 4. Rename package baoyu-chrome-cdp → sc-chrome-cdp
 
   **What to do**:
   - `git mv packages/baoyu-chrome-cdp packages/sc-chrome-cdp`
@@ -442,7 +442,7 @@ Max Concurrent: 5 (Wave 5)
   - Files: `packages/sc-chrome-cdp/`
   - Pre-commit: `npm test`
 
-- [ ] 5. Sync vendors and update all skill import statements
+- [x] 5. Sync vendors and update all skill import statements
 
   **What to do**:
   - 运行 `node scripts/sync-shared-skill-packages.mjs --repo-root .` 让同步脚本自动用 `packages/sc-*` 的新内容重新生成所有 vendored 副本

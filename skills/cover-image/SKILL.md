@@ -15,22 +15,22 @@ Generate elegant cover images for articles with 5-dimensional customization.
 
 ```bash
 # Auto-select dimensions based on content
-/baoyu-cover-image path/to/article.md
+/cover-image path/to/article.md
 
 # Quick mode: skip confirmation
-/baoyu-cover-image article.md --quick
+/cover-image article.md --quick
 
 # Specify dimensions
-/baoyu-cover-image article.md --type conceptual --palette warm --rendering flat-vector
+/cover-image article.md --type conceptual --palette warm --rendering flat-vector
 
 # Style presets (shorthand for palette + rendering)
-/baoyu-cover-image article.md --style blueprint
+/cover-image article.md --style blueprint
 
 # With reference images
-/baoyu-cover-image article.md --ref style-ref.png
+/cover-image article.md --ref style-ref.png
 
 # Direct content input
-/baoyu-cover-image --palette mono --aspect 1:1 --quick
+/cover-image --palette mono --aspect 1:1 --quick
 [paste content]
 ```
 
@@ -133,17 +133,17 @@ Analyze + Save Refs → [Output Dir] → [Confirm: 6 Dimensions] → Prompt → 
 Check EXTEND.md existence (priority: project → user):
 ```bash
 # macOS, Linux, WSL, Git Bash
-test -f .baoyu-skills/baoyu-cover-image/EXTEND.md && echo "project"
-test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-cover-image/EXTEND.md" && echo "xdg"
-test -f "$HOME/.baoyu-skills/baoyu-cover-image/EXTEND.md" && echo "user"
+test -f .baoyu-skills/cover-image/EXTEND.md && echo "project"
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/cover-image/EXTEND.md" && echo "xdg"
+test -f "$HOME/.baoyu-skills/cover-image/EXTEND.md" && echo "user"
 ```
 
 ```powershell
 # PowerShell (Windows)
-if (Test-Path .baoyu-skills/baoyu-cover-image/EXTEND.md) { "project" }
+if (Test-Path .baoyu-skills/cover-image/EXTEND.md) { "project" }
 $xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
-if (Test-Path "$xdg/baoyu-skills/baoyu-cover-image/EXTEND.md") { "xdg" }
-if (Test-Path "$HOME/.baoyu-skills/baoyu-cover-image/EXTEND.md") { "user" }
+if (Test-Path "$xdg/baoyu-skills/cover-image/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.baoyu-skills/cover-image/EXTEND.md") { "user" }
 ```
 
 | Result | Action |

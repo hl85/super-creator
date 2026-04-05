@@ -14,11 +14,11 @@ Two dimensions: **layout** (information structure) × **style** (visual aestheti
 ## Usage
 
 ```bash
-/baoyu-infographic path/to/content.md
-/baoyu-infographic path/to/content.md --layout hierarchical-layers --style technical-schematic
-/baoyu-infographic path/to/content.md --aspect portrait --lang zh
-/baoyu-infographic path/to/content.md --aspect 3:4
-/baoyu-infographic  # then paste content
+/infographic path/to/content.md
+/infographic path/to/content.md --layout hierarchical-layers --style technical-schematic
+/infographic path/to/content.md --aspect portrait --lang zh
+/infographic path/to/content.md --aspect 3:4
+/infographic  # then paste content
 ```
 
 ## Options
@@ -147,25 +147,25 @@ Check EXTEND.md existence (priority order):
 
 ```bash
 # macOS, Linux, WSL, Git Bash
-test -f .baoyu-skills/baoyu-infographic/EXTEND.md && echo "project"
-test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-infographic/EXTEND.md" && echo "xdg"
-test -f "$HOME/.baoyu-skills/baoyu-infographic/EXTEND.md" && echo "user"
+test -f .baoyu-skills/infographic/EXTEND.md && echo "project"
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/infographic/EXTEND.md" && echo "xdg"
+test -f "$HOME/.baoyu-skills/infographic/EXTEND.md" && echo "user"
 ```
 
 ```powershell
 # PowerShell (Windows)
-if (Test-Path .baoyu-skills/baoyu-infographic/EXTEND.md) { "project" }
+if (Test-Path .baoyu-skills/infographic/EXTEND.md) { "project" }
 $xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
-if (Test-Path "$xdg/baoyu-skills/baoyu-infographic/EXTEND.md") { "xdg" }
-if (Test-Path "$HOME/.baoyu-skills/baoyu-infographic/EXTEND.md") { "user" }
+if (Test-Path "$xdg/baoyu-skills/infographic/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.baoyu-skills/infographic/EXTEND.md") { "user" }
 ```
 
 ┌────────────────────────────────────────────────────┬───────────────────┐
 │                        Path                        │     Location      │
 ├────────────────────────────────────────────────────┼───────────────────┤
-│ .baoyu-skills/baoyu-infographic/EXTEND.md          │ Project directory │
+│ .baoyu-skills/infographic/EXTEND.md          │ Project directory │
 ├────────────────────────────────────────────────────┼───────────────────┤
-│ $HOME/.baoyu-skills/baoyu-infographic/EXTEND.md    │ User home         │
+│ $HOME/.baoyu-skills/infographic/EXTEND.md    │ User home         │
 └────────────────────────────────────────────────────┴───────────────────┘
 
 ┌───────────┬───────────────────────────────────────────────────────────────────────────┐

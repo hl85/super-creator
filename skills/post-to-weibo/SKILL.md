@@ -39,25 +39,25 @@ Check EXTEND.md existence (priority order):
 
 ```bash
 # macOS, Linux, WSL, Git Bash
-test -f .baoyu-skills/baoyu-post-to-weibo/EXTEND.md && echo "project"
-test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-post-to-weibo/EXTEND.md" && echo "xdg"
-test -f "$HOME/.baoyu-skills/baoyu-post-to-weibo/EXTEND.md" && echo "user"
+test -f .baoyu-skills/post-to-weibo/EXTEND.md && echo "project"
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/post-to-weibo/EXTEND.md" && echo "xdg"
+test -f "$HOME/.baoyu-skills/post-to-weibo/EXTEND.md" && echo "user"
 ```
 
 ```powershell
 # PowerShell (Windows)
-if (Test-Path .baoyu-skills/baoyu-post-to-weibo/EXTEND.md) { "project" }
+if (Test-Path .baoyu-skills/post-to-weibo/EXTEND.md) { "project" }
 $xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
-if (Test-Path "$xdg/baoyu-skills/baoyu-post-to-weibo/EXTEND.md") { "xdg" }
-if (Test-Path "$HOME/.baoyu-skills/baoyu-post-to-weibo/EXTEND.md") { "user" }
+if (Test-Path "$xdg/baoyu-skills/post-to-weibo/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.baoyu-skills/post-to-weibo/EXTEND.md") { "user" }
 ```
 
 ┌──────────────────────────────────────────────────┬───────────────────┐
 │                       Path                       │     Location      │
 ├──────────────────────────────────────────────────┼───────────────────┤
-│ .baoyu-skills/baoyu-post-to-weibo/EXTEND.md      │ Project directory │
+│ .baoyu-skills/post-to-weibo/EXTEND.md      │ Project directory │
 ├──────────────────────────────────────────────────┼───────────────────┤
-│ $HOME/.baoyu-skills/baoyu-post-to-weibo/EXTEND.md│ User home         │
+│ $HOME/.baoyu-skills/post-to-weibo/EXTEND.md│ User home         │
 └──────────────────────────────────────────────────┴───────────────────┘
 
 ┌───────────┬───────────────────────────────────────────────────────────────────────────┐
@@ -157,7 +157,7 @@ If a script fails with `Chrome debug port not ready` or `Unable to connect`, kil
 pkill -f "remote-debugging-port.*baoyu-skills/chrome-profile" 2>/dev/null; sleep 2
 ```
 
-**CRITICAL**: Never kill all Chrome processes (`pkill -f "Google Chrome"`). Only kill Chrome instances launched by CDP with the baoyu-skills profile directory. The user may have regular Chrome windows open.
+**CRITICAL**: Never kill all Chrome processes (`pkill -f "Google Chrome"`). Only kill Chrome instances launched by CDP with the supercreator profile directory. The user may have regular Chrome windows open.
 
 **Important**: This should be done automatically -- when encountering this error, kill the CDP Chrome instances and retry the command without asking the user.
 

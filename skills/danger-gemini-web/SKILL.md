@@ -56,25 +56,25 @@ Check EXTEND.md existence (priority order):
 
 ```bash
 # macOS, Linux, WSL, Git Bash
-test -f .baoyu-skills/baoyu-danger-gemini-web/EXTEND.md && echo "project"
-test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-danger-gemini-web/EXTEND.md" && echo "xdg"
-test -f "$HOME/.baoyu-skills/baoyu-danger-gemini-web/EXTEND.md" && echo "user"
+test -f .baoyu-skills/danger-gemini-web/EXTEND.md && echo "project"
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/danger-gemini-web/EXTEND.md" && echo "xdg"
+test -f "$HOME/.baoyu-skills/danger-gemini-web/EXTEND.md" && echo "user"
 ```
 
 ```powershell
 # PowerShell (Windows)
-if (Test-Path .baoyu-skills/baoyu-danger-gemini-web/EXTEND.md) { "project" }
+if (Test-Path .baoyu-skills/danger-gemini-web/EXTEND.md) { "project" }
 $xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
-if (Test-Path "$xdg/baoyu-skills/baoyu-danger-gemini-web/EXTEND.md") { "xdg" }
-if (Test-Path "$HOME/.baoyu-skills/baoyu-danger-gemini-web/EXTEND.md") { "user" }
+if (Test-Path "$xdg/baoyu-skills/danger-gemini-web/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.baoyu-skills/danger-gemini-web/EXTEND.md") { "user" }
 ```
 
 ┌──────────────────────────────────────────────────────────┬───────────────────┐
 │                           Path                           │     Location      │
 ├──────────────────────────────────────────────────────────┼───────────────────┤
-│ .baoyu-skills/baoyu-danger-gemini-web/EXTEND.md          │ Project directory │
+│ .baoyu-skills/danger-gemini-web/EXTEND.md          │ Project directory │
 ├──────────────────────────────────────────────────────────┼───────────────────┤
-│ $HOME/.baoyu-skills/baoyu-danger-gemini-web/EXTEND.md    │ User home         │
+│ $HOME/.baoyu-skills/danger-gemini-web/EXTEND.md    │ User home         │
 └──────────────────────────────────────────────────────────┴───────────────────┘
 
 ┌───────────┬───────────────────────────────────────────────────────────────────────────┐

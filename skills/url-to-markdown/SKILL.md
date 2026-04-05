@@ -13,17 +13,17 @@ metadata:
 
 # URL to Markdown
 
-Fetches any URL via `baoyu-fetch` CLI (Chrome CDP + site-specific adapters) and converts it to clean markdown.
+Fetches any URL via `sc-fetch` CLI (Chrome CDP + site-specific adapters) and converts it to clean markdown.
 
 ## CLI Setup
 
-**Important**: The CLI source is vendored in the `scripts/vendor/baoyu-fetch/` subdirectory of this skill.
+**Important**: The CLI source is vendored in the `scripts/vendor/sc-fetch/` subdirectory of this skill.
 
 **Agent Execution Instructions**:
 1. Determine this SKILL.md file's directory path as `{baseDir}`
-2. CLI entry point = `{baseDir}/scripts/vendor/baoyu-fetch/src/cli.ts`
+2. CLI entry point = `{baseDir}/scripts/vendor/sc-fetch/src/cli.ts`
 3. Resolve `${BUN_X}` runtime: if `bun` installed → `bun`; if `npx` available → `npx -y bun`; else suggest installing bun
-4. `${READER}` = `${BUN_X} {baseDir}/scripts/vendor/baoyu-fetch/src/cli.ts`
+4. `${READER}` = `${BUN_X} {baseDir}/scripts/vendor/sc-fetch/src/cli.ts`
 5. Replace all `${READER}` in this document with the resolved value
 
 ## Preferences (EXTEND.md)
@@ -32,23 +32,23 @@ Check EXTEND.md existence (priority order):
 
 ```bash
 # macOS, Linux, WSL, Git Bash
-test -f .baoyu-skills/baoyu-url-to-markdown/EXTEND.md && echo "project"
-test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-url-to-markdown/EXTEND.md" && echo "xdg"
-test -f "$HOME/.baoyu-skills/baoyu-url-to-markdown/EXTEND.md" && echo "user"
+test -f .baoyu-skills/url-to-markdown/EXTEND.md && echo "project"
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/url-to-markdown/EXTEND.md" && echo "xdg"
+test -f "$HOME/.baoyu-skills/url-to-markdown/EXTEND.md" && echo "user"
 ```
 
 ```powershell
 # PowerShell (Windows)
-if (Test-Path .baoyu-skills/baoyu-url-to-markdown/EXTEND.md) { "project" }
+if (Test-Path .baoyu-skills/url-to-markdown/EXTEND.md) { "project" }
 $xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
-if (Test-Path "$xdg/baoyu-skills/baoyu-url-to-markdown/EXTEND.md") { "xdg" }
-if (Test-Path "$HOME/.baoyu-skills/baoyu-url-to-markdown/EXTEND.md") { "user" }
+if (Test-Path "$xdg/baoyu-skills/url-to-markdown/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.baoyu-skills/url-to-markdown/EXTEND.md") { "user" }
 ```
 
 | Path | Location |
 |------|----------|
-| `.baoyu-skills/baoyu-url-to-markdown/EXTEND.md` | Project directory |
-| `$HOME/.baoyu-skills/baoyu-url-to-markdown/EXTEND.md` | User home |
+| `.baoyu-skills/url-to-markdown/EXTEND.md` | Project directory |
+| `$HOME/.baoyu-skills/url-to-markdown/EXTEND.md` | User home |
 
 | Result | Action |
 |--------|--------|
@@ -100,7 +100,7 @@ Full reference: [references/config/first-time-setup.md](references/config/first-
 
 ## Features
 
-- Chrome CDP for full JavaScript rendering via `baoyu-fetch` CLI
+- Chrome CDP for full JavaScript rendering via `sc-fetch` CLI
 - Site-specific adapters: X/Twitter, YouTube, Hacker News, generic (Defuddle)
 - Automatic adapter selection based on URL, or force with `--adapter`
 - Interaction gate detection: Cloudflare, reCAPTCHA, hCAPTCHA, custom challenges
@@ -230,7 +230,7 @@ After every headless run, the agent **MUST** inspect the saved markdown output.
 
 ## Output Path Generation
 
-The agent must construct the output file path since `baoyu-fetch` does not auto-generate paths.
+The agent must construct the output file path since `sc-fetch` does not auto-generate paths.
 
 **Algorithm**:
 1. Determine base directory from EXTEND.md `default_output_dir` or default `./url-to-markdown/`

@@ -17,7 +17,7 @@ async function makeTempDir(prefix: string): Promise<string> {
 }
 
 test("CLI forwards wrapper title and vendor render options", async () => {
-  const root = await makeTempDir("baoyu-markdown-to-html-cli-");
+  const root = await makeTempDir("markdown-to-html-cli-");
   const markdownPath = path.join(root, "article.md");
   await fs.writeFile(markdownPath, "## Section\n\nParagraph with **bold** text.\n", "utf-8");
 

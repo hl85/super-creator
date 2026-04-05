@@ -421,7 +421,7 @@ export async function generateImage(
 
   if (args.referenceImages.length > 0) {
     throw new Error(
-      "Reference images are not supported with DashScope provider in baoyu-imagine. Use --provider google with a Gemini multimodal model."
+      "Reference images are not supported with DashScope provider in imagine. Use --provider google with a Gemini multimodal model."
     );
   }
 

@@ -33,25 +33,25 @@ Check EXTEND.md existence (priority order):
 
 ```bash
 # macOS, Linux, WSL, Git Bash
-test -f .baoyu-skills/baoyu-format-markdown/EXTEND.md && echo "project"
-test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-format-markdown/EXTEND.md" && echo "xdg"
-test -f "$HOME/.baoyu-skills/baoyu-format-markdown/EXTEND.md" && echo "user"
+test -f .baoyu-skills/format-markdown/EXTEND.md && echo "project"
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/format-markdown/EXTEND.md" && echo "xdg"
+test -f "$HOME/.baoyu-skills/format-markdown/EXTEND.md" && echo "user"
 ```
 
 ```powershell
 # PowerShell (Windows)
-if (Test-Path .baoyu-skills/baoyu-format-markdown/EXTEND.md) { "project" }
+if (Test-Path .baoyu-skills/format-markdown/EXTEND.md) { "project" }
 $xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
-if (Test-Path "$xdg/baoyu-skills/baoyu-format-markdown/EXTEND.md") { "xdg" }
-if (Test-Path "$HOME/.baoyu-skills/baoyu-format-markdown/EXTEND.md") { "user" }
+if (Test-Path "$xdg/baoyu-skills/format-markdown/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.baoyu-skills/format-markdown/EXTEND.md") { "user" }
 ```
 
 ┌──────────────────────────────────────────────────────────┬───────────────────┐
 │                           Path                           │     Location      │
 ├──────────────────────────────────────────────────────────┼───────────────────┤
-│ .baoyu-skills/baoyu-format-markdown/EXTEND.md            │ Project directory │
+│ .baoyu-skills/format-markdown/EXTEND.md            │ Project directory │
 ├──────────────────────────────────────────────────────────┼───────────────────┤
-│ $HOME/.baoyu-skills/baoyu-format-markdown/EXTEND.md      │ User home         │
+│ $HOME/.baoyu-skills/format-markdown/EXTEND.md      │ User home         │
 └──────────────────────────────────────────────────────────┴───────────────────┘
 
 ┌───────────┬───────────────────────────────────────────────────────────────────────────┐

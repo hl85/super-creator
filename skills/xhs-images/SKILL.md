@@ -15,34 +15,34 @@ Break down complex content into eye-catching infographic series for Xiaohongshu 
 
 ```bash
 # Auto-select style and layout based on content
-/baoyu-xhs-images posts/ai-future/article.md
+/xhs-images posts/ai-future/article.md
 
 # Specify style
-/baoyu-xhs-images posts/ai-future/article.md --style notion
+/xhs-images posts/ai-future/article.md --style notion
 
 # Specify layout
-/baoyu-xhs-images posts/ai-future/article.md --layout dense
+/xhs-images posts/ai-future/article.md --layout dense
 
 # Combine style and layout
-/baoyu-xhs-images posts/ai-future/article.md --style notion --layout list
+/xhs-images posts/ai-future/article.md --style notion --layout list
 
 # Use preset (style + layout shorthand)
-/baoyu-xhs-images posts/ai-future/article.md --preset knowledge-card
+/xhs-images posts/ai-future/article.md --preset knowledge-card
 
 # Preset with override
-/baoyu-xhs-images posts/ai-future/article.md --preset poster --layout quadrant
+/xhs-images posts/ai-future/article.md --preset poster --layout quadrant
 
 # Direct content input
-/baoyu-xhs-images
+/xhs-images
 [paste content]
 
 # Direct input with options
-/baoyu-xhs-images --style bold --layout comparison
+/xhs-images --style bold --layout comparison
 [paste content]
 
 # Non-interactive (for scheduled tasks / automation)
-/baoyu-xhs-images posts/ai-future/article.md --yes
-/baoyu-xhs-images posts/ai-future/article.md --yes --preset knowledge-card
+/xhs-images posts/ai-future/article.md --yes
+/xhs-images posts/ai-future/article.md --yes --preset knowledge-card
 ```
 
 ## Options
@@ -286,25 +286,25 @@ Check EXTEND.md existence (priority order):
 
 ```bash
 # macOS, Linux, WSL, Git Bash
-test -f .baoyu-skills/baoyu-xhs-images/EXTEND.md && echo "project"
-test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-xhs-images/EXTEND.md" && echo "xdg"
-test -f "$HOME/.baoyu-skills/baoyu-xhs-images/EXTEND.md" && echo "user"
+test -f .baoyu-skills/xhs-images/EXTEND.md && echo "project"
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/xhs-images/EXTEND.md" && echo "xdg"
+test -f "$HOME/.baoyu-skills/xhs-images/EXTEND.md" && echo "user"
 ```
 
 ```powershell
 # PowerShell (Windows)
-if (Test-Path .baoyu-skills/baoyu-xhs-images/EXTEND.md) { "project" }
+if (Test-Path .baoyu-skills/xhs-images/EXTEND.md) { "project" }
 $xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
-if (Test-Path "$xdg/baoyu-skills/baoyu-xhs-images/EXTEND.md") { "xdg" }
-if (Test-Path "$HOME/.baoyu-skills/baoyu-xhs-images/EXTEND.md") { "user" }
+if (Test-Path "$xdg/baoyu-skills/xhs-images/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.baoyu-skills/xhs-images/EXTEND.md") { "user" }
 ```
 
 ┌────────────────────────────────────────────────────┬───────────────────┐
 │                        Path                        │     Location      │
 ├────────────────────────────────────────────────────┼───────────────────┤
-│ .baoyu-skills/baoyu-xhs-images/EXTEND.md           │ Project directory │
+│ .baoyu-skills/xhs-images/EXTEND.md           │ Project directory │
 ├────────────────────────────────────────────────────┼───────────────────┤
-│ $HOME/.baoyu-skills/baoyu-xhs-images/EXTEND.md     │ User home         │
+│ $HOME/.baoyu-skills/xhs-images/EXTEND.md     │ User home         │
 └────────────────────────────────────────────────────┴───────────────────┘
 
 ┌───────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────┐

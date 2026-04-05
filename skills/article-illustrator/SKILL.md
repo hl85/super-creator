@@ -54,17 +54,17 @@ See [references/styles.md](references/styles.md) for Core Styles, full gallery, 
 
 ```bash
 # macOS, Linux, WSL, Git Bash
-test -f .baoyu-skills/baoyu-article-illustrator/EXTEND.md && echo "project"
-test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-article-illustrator/EXTEND.md" && echo "xdg"
-test -f "$HOME/.baoyu-skills/baoyu-article-illustrator/EXTEND.md" && echo "user"
+test -f .baoyu-skills/article-illustrator/EXTEND.md && echo "project"
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/article-illustrator/EXTEND.md" && echo "xdg"
+test -f "$HOME/.baoyu-skills/article-illustrator/EXTEND.md" && echo "user"
 ```
 
 ```powershell
 # PowerShell (Windows)
-if (Test-Path .baoyu-skills/baoyu-article-illustrator/EXTEND.md) { "project" }
+if (Test-Path .baoyu-skills/article-illustrator/EXTEND.md) { "project" }
 $xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
-if (Test-Path "$xdg/baoyu-skills/baoyu-article-illustrator/EXTEND.md") { "xdg" }
-if (Test-Path "$HOME/.baoyu-skills/baoyu-article-illustrator/EXTEND.md") { "user" }
+if (Test-Path "$xdg/baoyu-skills/article-illustrator/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.baoyu-skills/article-illustrator/EXTEND.md") { "user" }
 ```
 
 | Result | Action |
@@ -118,7 +118,7 @@ Full template: [references/workflow.md](references/workflow.md#step-4-generate-o
 
 ⛔ **BLOCKING: Prompt files MUST be saved before ANY image generation.**
 
-**Execution strategy**: When multiple illustrations have saved prompt files and the task is now plain generation, prefer `baoyu-imagine` batch mode (`build-batch.ts` → `--batchfile`) over spawning subagents. Use subagents only when each image still needs separate prompt iteration or creative exploration.
+**Execution strategy**: When multiple illustrations have saved prompt files and the task is now plain generation, prefer `imagine` batch mode (`build-batch.ts` → `--batchfile`) over spawning subagents. Use subagents only when each image still needs separate prompt iteration or creative exploration.
 
 1. For each illustration, create a prompt file per [references/prompt-construction.md](references/prompt-construction.md)
 2. Save to `prompts/NN-{type}-{slug}.md` with YAML frontmatter

@@ -18,13 +18,13 @@ Transform content into professional slide deck images.
 ## Usage
 
 ```bash
-/baoyu-slide-deck path/to/content.md
-/baoyu-slide-deck path/to/content.md --style sketch-notes
-/baoyu-slide-deck path/to/content.md --audience executives
-/baoyu-slide-deck path/to/content.md --lang zh
-/baoyu-slide-deck path/to/content.md --slides 10
-/baoyu-slide-deck path/to/content.md --outline-only
-/baoyu-slide-deck  # Then paste content
+/slide-deck path/to/content.md
+/slide-deck path/to/content.md --style sketch-notes
+/slide-deck path/to/content.md --audience executives
+/slide-deck path/to/content.md --lang zh
+/slide-deck path/to/content.md --slides 10
+/slide-deck path/to/content.md --outline-only
+/slide-deck  # Then paste content
 ```
 
 ## Script Directory
@@ -202,25 +202,25 @@ Check EXTEND.md existence (priority order):
 
 ```bash
 # macOS, Linux, WSL, Git Bash
-test -f .baoyu-skills/baoyu-slide-deck/EXTEND.md && echo "project"
-test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-slide-deck/EXTEND.md" && echo "xdg"
-test -f "$HOME/.baoyu-skills/baoyu-slide-deck/EXTEND.md" && echo "user"
+test -f .baoyu-skills/slide-deck/EXTEND.md && echo "project"
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/slide-deck/EXTEND.md" && echo "xdg"
+test -f "$HOME/.baoyu-skills/slide-deck/EXTEND.md" && echo "user"
 ```
 
 ```powershell
 # PowerShell (Windows)
-if (Test-Path .baoyu-skills/baoyu-slide-deck/EXTEND.md) { "project" }
+if (Test-Path .baoyu-skills/slide-deck/EXTEND.md) { "project" }
 $xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
-if (Test-Path "$xdg/baoyu-skills/baoyu-slide-deck/EXTEND.md") { "xdg" }
-if (Test-Path "$HOME/.baoyu-skills/baoyu-slide-deck/EXTEND.md") { "user" }
+if (Test-Path "$xdg/baoyu-skills/slide-deck/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.baoyu-skills/slide-deck/EXTEND.md") { "user" }
 ```
 
 ┌──────────────────────────────────────────────────┬───────────────────┐
 │                       Path                       │     Location      │
 ├──────────────────────────────────────────────────┼───────────────────┤
-│ .baoyu-skills/baoyu-slide-deck/EXTEND.md         │ Project directory │
+│ .baoyu-skills/slide-deck/EXTEND.md         │ Project directory │
 ├──────────────────────────────────────────────────┼───────────────────┤
-│ $HOME/.baoyu-skills/baoyu-slide-deck/EXTEND.md   │ User home         │
+│ $HOME/.baoyu-skills/slide-deck/EXTEND.md   │ User home         │
 └──────────────────────────────────────────────────┴───────────────────┘
 
 **When EXTEND.md Found** → Read, parse, **output summary to user**:
@@ -606,7 +606,7 @@ PDF: {topic-slug}.pdf
 Generate outline and prompts without images:
 
 ```bash
-/baoyu-slide-deck content.md --prompts-only
+/slide-deck content.md --prompts-only
 ```
 
 Output: `outline.md` + `prompts/*.md` ready for review/editing.
@@ -616,7 +616,7 @@ Output: `outline.md` + `prompts/*.md` ready for review/editing.
 Generate images from existing prompts (starts at Step 7):
 
 ```bash
-/baoyu-slide-deck slide-deck/topic-slug/ --images-only
+/slide-deck slide-deck/topic-slug/ --images-only
 ```
 
 Prerequisites:
@@ -629,10 +629,10 @@ Regenerate specific slides:
 
 ```bash
 # Single slide
-/baoyu-slide-deck slide-deck/topic-slug/ --regenerate 3
+/slide-deck slide-deck/topic-slug/ --regenerate 3
 
 # Multiple slides
-/baoyu-slide-deck slide-deck/topic-slug/ --regenerate 2,5,8
+/slide-deck slide-deck/topic-slug/ --regenerate 2,5,8
 ```
 
 Flow:
@@ -653,7 +653,7 @@ Flow:
 ### Edit Single Slide
 
 1. **Update prompt file FIRST** in `prompts/NN-slide-{slug}.md`
-2. Run: `/baoyu-slide-deck <dir> --regenerate N`
+2. Run: `/slide-deck <dir> --regenerate N`
 3. Or manually regenerate image + PDF
 
 **IMPORTANT**: When updating slides, ALWAYS update the prompt file (`prompts/NN-slide-{slug}.md`) FIRST before regenerating. This ensures changes are documented and reproducible.

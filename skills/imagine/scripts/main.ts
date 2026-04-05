@@ -479,11 +479,11 @@ type ExtendConfigPathPair = {
 function getExtendConfigPathPairs(cwd: string, home: string): ExtendConfigPathPair[] {
   return [
     {
-      current: path.join(cwd, ".baoyu-skills", "baoyu-imagine", "EXTEND.md"),
+      current: path.join(cwd, ".baoyu-skills", "imagine", "EXTEND.md"),
       legacy: path.join(cwd, ".baoyu-skills", "baoyu-image-gen", "EXTEND.md"),
     },
     {
-      current: path.join(home, ".baoyu-skills", "baoyu-imagine", "EXTEND.md"),
+      current: path.join(home, ".baoyu-skills", "imagine", "EXTEND.md"),
       legacy: path.join(home, ".baoyu-skills", "baoyu-image-gen", "EXTEND.md"),
     },
   ];

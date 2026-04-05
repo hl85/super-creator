@@ -221,7 +221,7 @@ async function checkRunningChromeConflict(): Promise<void> {
 }
 
 async function main(): Promise<void> {
-  console.log('=== baoyu-post-to-wechat: Permission & Environment Check ===\n');
+  console.log('=== post-to-wechat: Permission & Environment Check ===\n');
 
   await checkChrome();
   await checkProfileIsolation();

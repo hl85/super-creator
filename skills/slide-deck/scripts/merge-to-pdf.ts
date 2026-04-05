@@ -68,7 +68,7 @@ function findSlideImages(dir: string): SlideInfo[] {
 
 async function createPdf(slides: SlideInfo[], outputPath: string) {
   const pdfDoc = await PDFDocument.create();
-  pdfDoc.setAuthor("baoyu-slide-deck");
+  pdfDoc.setAuthor("slide-deck");
   pdfDoc.setSubject("Generated Slide Deck");
 
   for (const slide of slides) {

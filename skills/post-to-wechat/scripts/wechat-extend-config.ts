@@ -131,12 +131,12 @@ function parseWechatExtend(content: string): WechatExtendConfig {
 
 export function loadWechatExtendConfig(): WechatExtendConfig {
   const paths = [
-    path.join(process.cwd(), ".baoyu-skills", "baoyu-post-to-wechat", "EXTEND.md"),
+    path.join(process.cwd(), ".baoyu-skills", "post-to-wechat", "EXTEND.md"),
     path.join(
       process.env.XDG_CONFIG_HOME || path.join(os.homedir(), ".config"),
-      "baoyu-skills", "baoyu-post-to-wechat", "EXTEND.md"
+      "baoyu-skills", "post-to-wechat", "EXTEND.md"
     ),
-    path.join(os.homedir(), ".baoyu-skills", "baoyu-post-to-wechat", "EXTEND.md"),
+    path.join(os.homedir(), ".baoyu-skills", "post-to-wechat", "EXTEND.md"),
   ];
   for (const p of paths) {
     try {

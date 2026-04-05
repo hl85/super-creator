@@ -29,25 +29,25 @@ Check EXTEND.md existence (priority order):
 
 ```bash
 # macOS, Linux, WSL, Git Bash
-test -f .baoyu-skills/baoyu-markdown-to-html/EXTEND.md && echo "project"
-test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-markdown-to-html/EXTEND.md" && echo "xdg"
-test -f "$HOME/.baoyu-skills/baoyu-markdown-to-html/EXTEND.md" && echo "user"
+test -f .baoyu-skills/markdown-to-html/EXTEND.md && echo "project"
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/markdown-to-html/EXTEND.md" && echo "xdg"
+test -f "$HOME/.baoyu-skills/markdown-to-html/EXTEND.md" && echo "user"
 ```
 
 ```powershell
 # PowerShell (Windows)
-if (Test-Path .baoyu-skills/baoyu-markdown-to-html/EXTEND.md) { "project" }
+if (Test-Path .baoyu-skills/markdown-to-html/EXTEND.md) { "project" }
 $xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
-if (Test-Path "$xdg/baoyu-skills/baoyu-markdown-to-html/EXTEND.md") { "xdg" }
-if (Test-Path "$HOME/.baoyu-skills/baoyu-markdown-to-html/EXTEND.md") { "user" }
+if (Test-Path "$xdg/baoyu-skills/markdown-to-html/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.baoyu-skills/markdown-to-html/EXTEND.md") { "user" }
 ```
 
 ┌──────────────────────────────────────────────────────────────┬───────────────────┐
 │                             Path                             │     Location      │
 ├──────────────────────────────────────────────────────────────┼───────────────────┤
-│ .baoyu-skills/baoyu-markdown-to-html/EXTEND.md               │ Project directory │
+│ .baoyu-skills/markdown-to-html/EXTEND.md               │ Project directory │
 ├──────────────────────────────────────────────────────────────┼───────────────────┤
-│ $HOME/.baoyu-skills/baoyu-markdown-to-html/EXTEND.md         │ User home         │
+│ $HOME/.baoyu-skills/markdown-to-html/EXTEND.md         │ User home         │
 └──────────────────────────────────────────────────────────────┴───────────────────┘
 
 ┌───────────┬───────────────────────────────────────────────────────────────────────────┐
@@ -73,13 +73,13 @@ if (Test-Path "$HOME/.baoyu-skills/baoyu-markdown-to-html/EXTEND.md") { "user" }
 
 **Format Suggestion**:
 
-If CJK content detected AND `baoyu-format-markdown` skill is available:
+If CJK content detected AND `format-markdown` skill is available:
 
 Use `AskUserQuestion` to ask whether to format first. Formatting can fix:
 - Bold markers with punctuation inside causing `**` parse failures
 - CJK/English spacing issues
 
-**If user agrees**: Invoke `baoyu-format-markdown` skill to format the file, then use formatted file as input.
+**If user agrees**: Invoke `format-markdown` skill to format the file, then use formatted file as input.
 
 **If user declines**: Continue with original file.
 
@@ -88,19 +88,19 @@ Use `AskUserQuestion` to ask whether to format first. Formatting can fix:
 **Theme resolution order** (first match wins):
 1. User explicitly specified theme (CLI `--theme` or conversation)
 2. EXTEND.md `default_theme` (this skill's own EXTEND.md, checked in Step 0)
-3. `baoyu-post-to-wechat` EXTEND.md `default_theme` (cross-skill fallback)
+3. `post-to-wechat` EXTEND.md `default_theme` (cross-skill fallback)
 4. If none found → use AskUserQuestion to confirm
 
 **Cross-skill EXTEND.md check** (only if this skill's EXTEND.md has no `default_theme`):
 
 ```bash
-# Check baoyu-post-to-wechat EXTEND.md for default_theme
-test -f "$HOME/.baoyu-skills/baoyu-post-to-wechat/EXTEND.md" && grep -o 'default_theme:.*' "$HOME/.baoyu-skills/baoyu-post-to-wechat/EXTEND.md"
+# Check post-to-wechat EXTEND.md for default_theme
+test -f "$HOME/.baoyu-skills/post-to-wechat/EXTEND.md" && grep -o 'default_theme:.*' "$HOME/.baoyu-skills/post-to-wechat/EXTEND.md"
 ```
 
 ```powershell
 # PowerShell (Windows)
-if (Test-Path "$HOME/.baoyu-skills/baoyu-post-to-wechat/EXTEND.md") { Select-String -Pattern 'default_theme:.*' -Path "$HOME/.baoyu-skills/baoyu-post-to-wechat/EXTEND.md" | ForEach-Object { $_.Matches.Value } }
+if (Test-Path "$HOME/.baoyu-skills/post-to-wechat/EXTEND.md") { Select-String -Pattern 'default_theme:.*' -Path "$HOME/.baoyu-skills/post-to-wechat/EXTEND.md" | ForEach-Object { $_.Matches.Value } }
 ```
 
 **If theme is resolved from EXTEND.md**: Use it directly, do NOT ask the user.

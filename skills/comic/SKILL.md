@@ -18,9 +18,9 @@ Create original knowledge comics with flexible art style × tone combinations.
 ## Usage
 
 ```bash
-/baoyu-comic posts/turing-story/source.md
-/baoyu-comic article.md --art manga --tone warm
-/baoyu-comic  # then paste content
+/comic posts/turing-story/source.md
+/comic article.md --art manga --tone warm
+/comic  # then paste content
 ```
 
 ## Options
@@ -216,7 +216,7 @@ Analyze → [Check Existing?] → [Confirm: Style + Reviews] → Storyboard → 
 
 **7.1 Generate character sheet first**:
 - **Backup rule**: If `characters/characters.png` exists, rename to `characters/characters-backup-YYYYMMDD-HHMMSS.png`
-- Invoke an installed image generation skill such as `baoyu-imagine`
+- Invoke an installed image generation skill such as `imagine`
 - Read that skill's `SKILL.md` and follow its documented interface rather than calling its scripts directly
 - Use `characters/characters.md` as the prompt-file input
 - Save output to `characters/characters.png`
@@ -252,8 +252,8 @@ Compress to reduce token usage when used as reference image:
 
 | Path | Location |
 |------|----------|
-| `.baoyu-skills/baoyu-comic/EXTEND.md` | Project directory |
-| `$HOME/.baoyu-skills/baoyu-comic/EXTEND.md` | User home |
+| `.baoyu-skills/comic/EXTEND.md` | Project directory |
+| `$HOME/.baoyu-skills/comic/EXTEND.md` | User home |
 
 | Result | Action |
 |--------|--------|
