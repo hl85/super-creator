@@ -1,5 +1,5 @@
 {
-  "name": "baoyu-danger-gemini-web-scripts",
+  "name": "danger-gemini-web-scripts",
   "private": true,
   "type": "module",
   "dependencies": {

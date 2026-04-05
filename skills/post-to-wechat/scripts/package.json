@@ -1,5 +1,5 @@
 {
-  "name": "baoyu-post-to-wechat-scripts",
+  "name": "post-to-wechat-scripts",
   "private": true,
   "type": "module",
   "dependencies": {

@@ -1,10 +1,10 @@
 ---
-name: baoyu-url-to-markdown
+name: url-to-markdown
 description: Fetch any URL and convert to markdown using sc-fetch CLI (Chrome CDP with site-specific adapters). Built-in adapters for X/Twitter, YouTube transcripts, Hacker News threads, and generic pages via Defuddle. Handles login/CAPTCHA via interaction wait modes. Use when user wants to save a webpage as markdown.
 version: 1.60.0
 metadata:
   openclaw:
-    homepage: https://github.com/JimLiu/baoyu-skills#baoyu-url-to-markdown
+    homepage: https://github.com/hl85/supercreator
     requires:
       anyBins:
         - bun

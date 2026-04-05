@@ -1,5 +1,5 @@
 {
-  "name": "baoyu-post-to-x-scripts",
+  "name": "post-to-x-scripts",
   "private": true,
   "type": "module",
   "dependencies": {

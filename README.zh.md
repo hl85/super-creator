@@ -1,8 +1,10 @@
-# baoyu-skills
+# supercreator
 
 [English](./README.md) | 中文
 
-宝玉分享的 Claude Code 技能集，提升日常工作效率。
+AI 驱动的 Claude Code 内容生成技能集。
+
+> **Fork 声明**：本项目 fork 自 [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills)，原始工作由 [@JimLiu](https://github.com/JimLiu) 完成。
 
 ## 前置要求
 
@@ -14,12 +16,12 @@
 ### 快速安装（推荐）
 
 ```bash
-npx skills add jimliu/baoyu-skills
+npx skills add hl85/supercreator
 ```
 
 ### 发布到 ClawHub / OpenClaw
 
-现在这个仓库支持把每个 `skills/baoyu-*` 目录作为独立 ClawHub skill 发布。
+现在这个仓库支持把每个 `skills/` 目录作为独立 ClawHub skill 发布。
 
 ```bash
 # 预览将要发布的变更
@@ -32,8 +34,8 @@ npx skills add jimliu/baoyu-skills
 ClawHub 按“单个 skill”安装，不是把整个 marketplace 一次性装进去。发布后，用户可以按需安装：
 
 ```bash
-clawhub install baoyu-imagine
-clawhub install baoyu-markdown-to-html
+clawhub install imagine
+clawhub install markdown-to-html
 ```
 
 根据 ClawHub 的 registry 规则，发布到 ClawHub 的 skill 会以 `MIT-0` 许可分发。
@@ -43,7 +45,7 @@ clawhub install baoyu-markdown-to-html
 在 Claude Code 中运行：
 
 ```bash
-/plugin marketplace add JimLiu/baoyu-skills
+/plugin marketplace add hl85/supercreator
 ```
 
 ### 安装技能
@@ -51,22 +53,22 @@ clawhub install baoyu-markdown-to-html
 **方式一：通过浏览界面**
 
 1. 选择 **Browse and install plugins**
-2. 选择 **baoyu-skills**
-3. 选择 **baoyu-skills** 插件
+2. 选择 **supercreator**
+3. 选择 **supercreator** 插件
 4. 选择 **Install now**
 
 **方式二：直接安装**
 
 ```bash
 # 安装 marketplace 中唯一的插件
-/plugin install baoyu-skills@baoyu-skills
+/plugin install supercreator@supercreator
 ```
 
 **方式三：告诉 Agent**
 
 直接告诉 Claude Code：
 
-> 请帮我安装 github.com/JimLiu/baoyu-skills 中的 Skills
+> 请帮我安装 github.com/hl85/supercreator 中的 Skills
 
 ### 可用插件
 
@@ -74,7 +76,7 @@ clawhub install baoyu-markdown-to-html
 
 | 插件 | 说明 | 包含内容 |
 |------|------|----------|
-| **baoyu-skills** | 提供内容生成、AI 后端和日常效率工具技能 | 仓库中的全部 skills，仍按下方的内容技能、AI 生成技能、工具技能三个分类展示 |
+| **supercreator** | 提供内容生成、AI 后端和日常效率工具技能 | 仓库中的全部 skills，仍按下方的内容技能、AI 生成技能、工具技能三个分类展示 |
 
 ## 更新技能
 
@@ -82,7 +84,7 @@ clawhub install baoyu-markdown-to-html
 
 1. 在 Claude Code 中运行 `/plugin`
 2. 切换到 **Marketplaces** 标签页（使用方向键或 Tab）
-3. 选择 **baoyu-skills**
+3. 选择 **supercreator**
 4. 选择 **Update marketplace**
 
 也可以选择 **Enable auto-update** 启用自动更新，每次启动时自动获取最新版本。
@@ -97,29 +99,29 @@ clawhub install baoyu-markdown-to-html
 
 内容生成和发布技能。
 
-#### baoyu-xhs-images
+#### xhs-images
 
 小红书信息图系列生成器。将内容拆解为 1-10 张卡通风格信息图，支持 **风格 × 布局** 二维系统。
 
 ```bash
 # 自动选择风格和布局
-/baoyu-xhs-images posts/ai-future/article.md
+/xhs-images posts/ai-future/article.md
 
 # 指定风格
-/baoyu-xhs-images posts/ai-future/article.md --style notion
+/xhs-images posts/ai-future/article.md --style notion
 
 # 指定布局
-/baoyu-xhs-images posts/ai-future/article.md --layout dense
+/xhs-images posts/ai-future/article.md --layout dense
 
 # 组合风格和布局
-/baoyu-xhs-images posts/ai-future/article.md --style tech --layout list
+/xhs-images posts/ai-future/article.md --style tech --layout list
 
 # 直接输入内容
-/baoyu-xhs-images 今日星座运势
+/xhs-images 今日星座运势
 
 # 非交互模式（跳过所有确认，适用于定时任务）
-/baoyu-xhs-images posts/ai-future/article.md --yes
-/baoyu-xhs-images posts/ai-future/article.md --yes --preset knowledge-card
+/xhs-images posts/ai-future/article.md --yes
+/xhs-images posts/ai-future/article.md --yes --preset knowledge-card
 ```
 
 **风格**（视觉美学）：`cute`（默认）、`fresh`、`warm`、`bold`、`minimal`、`retro`、`pop`、`notion`、`chalkboard`
@@ -154,26 +156,26 @@ clawhub install baoyu-markdown-to-html
 | ![list](./screenshots/xhs-images-layouts/list.webp) | ![comparison](./screenshots/xhs-images-layouts/comparison.webp) | ![flow](./screenshots/xhs-images-layouts/flow.webp) |
 | list | comparison | flow |
 
-#### baoyu-infographic
+#### infographic
 
 专业信息图生成器，支持 20 种布局和 17 种视觉风格。分析内容后推荐布局×风格组合，生成可发布的信息图。
 
 ```bash
 # 根据内容自动推荐组合
-/baoyu-infographic path/to/content.md
+/infographic path/to/content.md
 
 # 指定布局
-/baoyu-infographic path/to/content.md --layout pyramid
+/infographic path/to/content.md --layout pyramid
 
 # 指定风格（默认：craft-handmade）
-/baoyu-infographic path/to/content.md --style technical-schematic
+/infographic path/to/content.md --style technical-schematic
 
 # 同时指定布局和风格
-/baoyu-infographic path/to/content.md --layout funnel --style corporate-memphis
+/infographic path/to/content.md --layout funnel --style corporate-memphis
 
 # 指定比例（预设名称或自定义 W:H）
-/baoyu-infographic path/to/content.md --aspect portrait
-/baoyu-infographic path/to/content.md --aspect 3:4
+/infographic path/to/content.md --aspect portrait
+/infographic path/to/content.md --aspect 3:4
 ```
 
 **选项**：
@@ -267,29 +269,29 @@ clawhub install baoyu-markdown-to-html
 | ![knolling](./screenshots/infographic-styles/knolling.webp) | ![lego-brick](./screenshots/infographic-styles/lego-brick.webp) | |
 | knolling | lego-brick | |
 
-#### baoyu-cover-image
+#### cover-image
 
 为文章生成封面图，支持五维定制系统：类型 × 配色 × 渲染 × 文字 × 氛围。9 种配色方案与 6 种渲染风格组合，提供 54 种独特效果。
 
 ```bash
 # 根据内容自动选择所有维度
-/baoyu-cover-image path/to/article.md
+/cover-image path/to/article.md
 
 # 快速模式：跳过确认，使用自动选择
-/baoyu-cover-image path/to/article.md --quick
+/cover-image path/to/article.md --quick
 
 # 指定维度（5D 系统）
-/baoyu-cover-image path/to/article.md --type conceptual --palette cool --rendering digital
-/baoyu-cover-image path/to/article.md --text title-subtitle --mood bold
+/cover-image path/to/article.md --type conceptual --palette cool --rendering digital
+/cover-image path/to/article.md --text title-subtitle --mood bold
 
 # 风格预设（向后兼容的简写方式）
-/baoyu-cover-image path/to/article.md --style blueprint
+/cover-image path/to/article.md --style blueprint
 
 # 指定宽高比（默认：16:9）
-/baoyu-cover-image path/to/article.md --aspect 2.35:1
+/cover-image path/to/article.md --aspect 2.35:1
 
 # 纯视觉（不含标题文字）
-/baoyu-cover-image path/to/article.md --no-title
+/cover-image path/to/article.md --no-title
 ```
 
 **五个维度**：
@@ -299,26 +301,26 @@ clawhub install baoyu-markdown-to-html
 - **文字 (Text)**：`none`、`title-only`（默认）、`title-subtitle`、`text-rich`
 - **氛围 (Mood)**：`subtle`、`balanced`（默认）、`bold`
 
-#### baoyu-slide-deck
+#### slide-deck
 
 从内容生成专业的幻灯片图片。先创建包含样式说明的完整大纲，然后逐页生成幻灯片图片。
 
 ```bash
 # 从 markdown 文件生成
-/baoyu-slide-deck path/to/article.md
+/slide-deck path/to/article.md
 
 # 指定风格和受众
-/baoyu-slide-deck path/to/article.md --style corporate
-/baoyu-slide-deck path/to/article.md --audience executives
+/slide-deck path/to/article.md --style corporate
+/slide-deck path/to/article.md --audience executives
 
 # 指定页数
-/baoyu-slide-deck path/to/article.md --slides 15
+/slide-deck path/to/article.md --slides 15
 
 # 仅生成大纲（不生成图片）
-/baoyu-slide-deck path/to/article.md --outline-only
+/slide-deck path/to/article.md --outline-only
 
 # 指定语言
-/baoyu-slide-deck path/to/article.md --lang zh
+/slide-deck path/to/article.md --lang zh
 ```
 
 **选项**：
@@ -385,31 +387,31 @@ clawhub install baoyu-markdown-to-html
 
 生成完成后，所有幻灯片会自动合并为 `.pptx` 和 `.pdf` 文件，方便分享。
 
-#### baoyu-comic
+#### comic
 
 知识漫画创作器，支持画风 × 基调灵活组合。创作带有详细分镜布局的原创教育漫画，逐页生成图片。
 
 ```bash
 # 从素材文件生成（自动选择画风 + 基调）
-/baoyu-comic posts/turing-story/source.md
+/comic posts/turing-story/source.md
 
 # 指定画风和基调
-/baoyu-comic posts/turing-story/source.md --art manga --tone warm
-/baoyu-comic posts/turing-story/source.md --art ink-brush --tone dramatic
+/comic posts/turing-story/source.md --art manga --tone warm
+/comic posts/turing-story/source.md --art ink-brush --tone dramatic
 
 # 使用预设（包含特殊规则）
-/baoyu-comic posts/turing-story/source.md --style ohmsha
-/baoyu-comic posts/turing-story/source.md --style wuxia
+/comic posts/turing-story/source.md --style ohmsha
+/comic posts/turing-story/source.md --style wuxia
 
 # 指定布局和比例
-/baoyu-comic posts/turing-story/source.md --layout cinematic
-/baoyu-comic posts/turing-story/source.md --aspect 16:9
+/comic posts/turing-story/source.md --layout cinematic
+/comic posts/turing-story/source.md --aspect 16:9
 
 # 指定语言
-/baoyu-comic posts/turing-story/source.md --lang zh
+/comic posts/turing-story/source.md --lang zh
 
 # 直接输入内容
-/baoyu-comic "图灵的故事与计算机科学的诞生"
+/comic "图灵的故事与计算机科学的诞生"
 ```
 
 **选项**：
@@ -471,22 +473,22 @@ clawhub install baoyu-markdown-to-html
 | ![splash](./screenshots/comic-layouts/splash.webp) | ![mixed](./screenshots/comic-layouts/mixed.webp) | ![webtoon](./screenshots/comic-layouts/webtoon.webp) |
 | splash | mixed | webtoon |
 
-#### baoyu-article-illustrator
+#### article-illustrator
 
 智能文章插图技能，采用类型 × 风格二维系统。分析文章结构，识别需要视觉辅助的位置，生成插图。
 
 ```bash
 # 根据内容自动选择类型和风格
-/baoyu-article-illustrator path/to/article.md
+/article-illustrator path/to/article.md
 
 # 指定类型
-/baoyu-article-illustrator path/to/article.md --type infographic
+/article-illustrator path/to/article.md --type infographic
 
 # 指定风格
-/baoyu-article-illustrator path/to/article.md --style blueprint
+/article-illustrator path/to/article.md --style blueprint
 
 # 组合类型和风格
-/baoyu-article-illustrator path/to/article.md --type flowchart --style notion
+/article-illustrator path/to/article.md --type flowchart --style notion
 ```
 
 **类型**（信息结构）：
@@ -524,7 +526,7 @@ clawhub install baoyu-markdown-to-html
 | ![editorial](./screenshots/article-illustrator-styles/editorial.webp) | ![scientific](./screenshots/article-illustrator-styles/scientific.webp) | |
 | editorial | scientific | |
 
-#### baoyu-post-to-x
+#### post-to-x
 
 发布内容和文章到 X (Twitter)。支持带图片的普通帖子和 X 文章（长篇 Markdown）。使用真实 Chrome + CDP 绕过反自动化检测。
 
@@ -532,33 +534,33 @@ clawhub install baoyu-markdown-to-html
 
 ```bash
 # 发布文字
-/baoyu-post-to-x "Hello from Claude Code!"
+/post-to-x "Hello from Claude Code!"
 
 # 发布带图片
-/baoyu-post-to-x "看看这个" --image photo.png
+/post-to-x "看看这个" --image photo.png
 
 # 发布 X 文章
-/baoyu-post-to-x --article path/to/article.md
+/post-to-x --article path/to/article.md
 ```
 
-#### baoyu-post-to-wechat
+#### post-to-wechat
 
 发布内容到微信公众号，支持两种模式：
 
 **贴图模式** - 多图配短标题和正文：
 
 ```bash
-/baoyu-post-to-wechat 贴图 --markdown article.md --images ./photos/
-/baoyu-post-to-wechat 贴图 --markdown article.md --image img1.png --image img2.png --image img3.png
-/baoyu-post-to-wechat 贴图 --title "标题" --content "内容" --image img1.png --submit
+/post-to-wechat 贴图 --markdown article.md --images ./photos/
+/post-to-wechat 贴图 --markdown article.md --image img1.png --image img2.png --image img3.png
+/post-to-wechat 贴图 --title "标题" --content "内容" --image img1.png --submit
 ```
 
 **文章模式** - 完整 markdown/HTML 富文本格式：
 
 ```bash
-/baoyu-post-to-wechat 文章 --markdown article.md
-/baoyu-post-to-wechat 文章 --markdown article.md --theme grace
-/baoyu-post-to-wechat 文章 --html article.html
+/post-to-wechat 文章 --markdown article.md
+/post-to-wechat 文章 --markdown article.md --theme grace
+/post-to-wechat 文章 --html article.html
 ```
 
 **发布方式**：
@@ -571,7 +573,7 @@ clawhub install baoyu-markdown-to-html
 **API 配置**（更快的发布方式）：
 
 ```bash
-# 添加到 .baoyu-skills/.env（项目级）或 ~/.baoyu-skills/.env（用户级）
+# 添加到 .supercreator/.env（项目级）或 ~/.supercreator/.env（用户级）
 WECHAT_APP_ID=你的AppID
 WECHAT_APP_SECRET=你的AppSecret
 ```
@@ -587,10 +589,10 @@ WECHAT_APP_SECRET=你的AppSecret
 **多账号支持**：通过 `EXTEND.md` 管理多个微信公众号：
 
 ```bash
-mkdir -p .baoyu-skills/baoyu-post-to-wechat
+mkdir -p .supercreator/post-to-wechat
 ```
 
-创建 `.baoyu-skills/baoyu-post-to-wechat/EXTEND.md`：
+创建 `.supercreator/post-to-wechat/EXTEND.md`：
 
 ```yaml
 # 全局设置（所有账号共享）
@@ -599,11 +601,11 @@ default_color: blue
 
 # 账号列表
 accounts:
-  - name: 宝玉的技术分享
-    alias: baoyu
+  - name: 我的公众号
+    alias: my-account
     default: false
     default_publish_method: api
-    default_author: 宝玉
+    default_author: 作者
     need_open_comment: 1
     only_fans_can_comment: 0
     app_id: 你的微信AppID
@@ -623,9 +625,9 @@ accounts:
 | 2+ 个账号 | 提示选择，或使用 `--account <别名>` |
 | 某账号设置 `default: true` | 预选为默认账号 |
 
-每个账号拥有独立的 Chrome 配置目录，保证浏览器方式下的登录会话互不干扰。API 凭证可在 EXTEND.md 中直接配置，也可通过 `.env` 文件使用别名前缀的环境变量（如 `WECHAT_BAOYU_APP_ID`）。
+每个账号拥有独立的 Chrome 配置目录，保证浏览器方式下的登录会话互不干扰。API 凭证可在 EXTEND.md 中直接配置，也可通过 `.env` 文件使用别名前缀的环境变量（如 `WECHAT_MY_ACCOUNT_APP_ID`）。
 
-#### baoyu-post-to-weibo
+#### post-to-weibo
 
 发布内容到微博。支持文字、图片、视频发布和头条文章（长篇 Markdown）。使用真实 Chrome + CDP 绕过反自动化检测。
 
@@ -633,23 +635,23 @@ accounts:
 
 ```bash
 # 发布文字
-/baoyu-post-to-weibo "Hello Weibo!"
+/post-to-weibo "Hello Weibo!"
 
 # 发布带图片
-/baoyu-post-to-weibo "看看这个" --image photo.png
+/post-to-weibo "看看这个" --image photo.png
 
 # 发布带视频
-/baoyu-post-to-weibo "看这个" --video clip.mp4
+/post-to-weibo "看这个" --video clip.mp4
 ```
 
 **头条文章** - 长篇 Markdown 文章：
 
 ```bash
 # 发布文章
-/baoyu-post-to-weibo --article article.md
+/post-to-weibo --article article.md
 
 # 带封面图
-/baoyu-post-to-weibo --article article.md --cover cover.jpg
+/post-to-weibo --article article.md --cover cover.jpg
 ```
 
 **文章选项**：
@@ -665,58 +667,58 @@ accounts:
 
 AI 驱动的生成后端。
 
-#### baoyu-imagine
+#### imagine
 
 基于 AI SDK 的图像生成，支持 OpenAI、Azure OpenAI、Google、OpenRouter、DashScope（阿里通义万相）、MiniMax、即梦（Jimeng）、豆包（Seedream）和 Replicate API。支持文生图、参考图、宽高比、自定义尺寸、批量生成和质量预设。
 
 ```bash
 # 基础生成（自动检测服务商）
-/baoyu-imagine --prompt "一只可爱的猫" --image cat.png
+/imagine --prompt "一只可爱的猫" --image cat.png
 
 # 指定宽高比
-/baoyu-imagine --prompt "风景图" --image landscape.png --ar 16:9
+/imagine --prompt "风景图" --image landscape.png --ar 16:9
 
 # 高质量（2k 分辨率）
-/baoyu-imagine --prompt "横幅图" --image banner.png --quality 2k
+/imagine --prompt "横幅图" --image banner.png --quality 2k
 
 # 指定服务商
-/baoyu-imagine --prompt "一只猫" --image cat.png --provider openai
+/imagine --prompt "一只猫" --image cat.png --provider openai
 
 # Azure OpenAI（model 为部署名称）
-/baoyu-imagine --prompt "一只猫" --image cat.png --provider azure --model gpt-image-1.5
+/imagine --prompt "一只猫" --image cat.png --provider azure --model gpt-image-1.5
 
 # OpenRouter
-/baoyu-imagine --prompt "一只猫" --image cat.png --provider openrouter
+/imagine --prompt "一只猫" --image cat.png --provider openrouter
 
 # OpenRouter + 参考图
-/baoyu-imagine --prompt "把它变成蓝色" --image out.png --provider openrouter --model google/gemini-3.1-flash-image-preview --ref source.png
+/imagine --prompt "把它变成蓝色" --image out.png --provider openrouter --model google/gemini-3.1-flash-image-preview --ref source.png
 
 # DashScope（阿里通义万相）
-/baoyu-imagine --prompt "一只可爱的猫" --image cat.png --provider dashscope
+/imagine --prompt "一只可爱的猫" --image cat.png --provider dashscope
 
 # DashScope 自定义尺寸
-/baoyu-imagine --prompt "为咖啡品牌设计一张 21:9 横幅海报，包含清晰中文标题" --image banner.png --provider dashscope --model qwen-image-2.0-pro --size 2048x872
+/imagine --prompt "为咖啡品牌设计一张 21:9 横幅海报，包含清晰中文标题" --image banner.png --provider dashscope --model qwen-image-2.0-pro --size 2048x872
 
 # MiniMax
-/baoyu-imagine --prompt "A fashion editorial portrait by a bright studio window" --image out.jpg --provider minimax
+/imagine --prompt "A fashion editorial portrait by a bright studio window" --image out.jpg --provider minimax
 
 # MiniMax + 角色参考图
-/baoyu-imagine --prompt "A girl stands by the library window, cinematic lighting" --image out.jpg --provider minimax --model image-01 --ref portrait.png --ar 16:9
+/imagine --prompt "A girl stands by the library window, cinematic lighting" --image out.jpg --provider minimax --model image-01 --ref portrait.png --ar 16:9
 
 # Replicate
-/baoyu-imagine --prompt "一只猫" --image cat.png --provider replicate
+/imagine --prompt "一只猫" --image cat.png --provider replicate
 
 # 即梦（Jimeng）
-/baoyu-imagine --prompt "一只可爱的猫" --image cat.png --provider jimeng
+/imagine --prompt "一只可爱的猫" --image cat.png --provider jimeng
 
 # 豆包（Seedream）
-/baoyu-imagine --prompt "一只可爱的猫" --image cat.png --provider seedream
+/imagine --prompt "一只可爱的猫" --image cat.png --provider seedream
 
 # 带参考图（Google、OpenAI、Azure OpenAI、OpenRouter、Replicate、MiniMax 或 Seedream 5.0/4.5/4.0）
-/baoyu-imagine --prompt "把它变成蓝色" --image out.png --ref source.png
+/imagine --prompt "把它变成蓝色" --image out.png --ref source.png
 
 # 批量模式
-/baoyu-imagine --batchfile batch.json --jobs 4 --json
+/imagine --batchfile batch.json --jobs 4 --json
 ```
 
 **选项**：
@@ -793,47 +795,47 @@ AI 驱动的生成后端。
 3. 如果只有一个 API 密钥 → 使用对应服务商
 4. 如果多个可用 → 默认使用 Google
 
-#### baoyu-danger-gemini-web
+#### danger-gemini-web
 
 与 Gemini Web 交互，生成文本和图片。
 
 **文本生成：**
 
 ```bash
-/baoyu-danger-gemini-web "你好，Gemini"
-/baoyu-danger-gemini-web --prompt "解释量子计算"
+/danger-gemini-web "你好，Gemini"
+/danger-gemini-web --prompt "解释量子计算"
 ```
 
 **图片生成：**
 
 ```bash
-/baoyu-danger-gemini-web --prompt "一只可爱的猫" --image cat.png
-/baoyu-danger-gemini-web --promptfiles system.md content.md --image out.png
+/danger-gemini-web --prompt "一只可爱的猫" --image cat.png
+/danger-gemini-web --promptfiles system.md content.md --image out.png
 ```
 
 ### 工具技能 (Utility Skills)
 
 内容处理工具。
 
-#### baoyu-youtube-transcript
+#### youtube-transcript
 
 下载 YouTube 视频字幕/转录文本和封面图片。支持多语言、翻译、章节分段和说话人识别。缓存原始数据以便快速重新格式化。
 
 ```bash
 # 默认：带时间戳的 Markdown
-/baoyu-youtube-transcript https://www.youtube.com/watch?v=VIDEO_ID
+/youtube-transcript https://www.youtube.com/watch?v=VIDEO_ID
 
 # 指定语言（按优先级排列）
-/baoyu-youtube-transcript https://youtu.be/VIDEO_ID --languages zh,en,ja
+/youtube-transcript https://youtu.be/VIDEO_ID --languages zh,en,ja
 
 # 章节分段 + 说话人识别
-/baoyu-youtube-transcript https://youtu.be/VIDEO_ID --chapters --speakers
+/youtube-transcript https://youtu.be/VIDEO_ID --chapters --speakers
 
 # SRT 字幕格式
-/baoyu-youtube-transcript https://youtu.be/VIDEO_ID --format srt
+/youtube-transcript https://youtu.be/VIDEO_ID --format srt
 
 # 列出可用字幕
-/baoyu-youtube-transcript https://youtu.be/VIDEO_ID --list
+/youtube-transcript https://youtu.be/VIDEO_ID --list
 ```
 
 **选项**：
@@ -849,19 +851,19 @@ AI 驱动的生成后端。
 | `--list` | 列出可用字幕 | |
 | `--refresh` | 强制重新获取，忽略缓存 | |
 
-#### baoyu-url-to-markdown
+#### url-to-markdown
 
 通过 Chrome CDP 抓取任意 URL 并转换为 Markdown。同时保存渲染后的 HTML 快照，Defuddle 失败时自动回退到旧版提取器。
 
 ```bash
 # 自动模式（默认）- 页面加载后立即抓取
-/baoyu-url-to-markdown https://example.com/article
+/url-to-markdown https://example.com/article
 
 # 等待模式 - 适用于需要登录的页面
-/baoyu-url-to-markdown https://example.com/private --wait
+/url-to-markdown https://example.com/private --wait
 
 # 保存到指定文件
-/baoyu-url-to-markdown https://example.com/article -o output.md
+/url-to-markdown https://example.com/article -o output.md
 ```
 
 **抓取模式**：
@@ -878,22 +880,22 @@ AI 驱动的生成后端。
 | `--wait` | 等待用户信号后抓取 |
 | `--timeout <ms>` | 页面加载超时（默认：30000） |
 
-#### baoyu-danger-x-to-markdown
+#### danger-x-to-markdown
 
 将 X (Twitter) 内容转换为 markdown 格式。支持推文串和 X 文章。
 
 ```bash
 # 将推文转换为 markdown
-/baoyu-danger-x-to-markdown https://x.com/username/status/123456
+/danger-x-to-markdown https://x.com/username/status/123456
 
 # 保存到指定文件
-/baoyu-danger-x-to-markdown https://x.com/username/status/123456 -o output.md
+/danger-x-to-markdown https://x.com/username/status/123456 -o output.md
 
 # JSON 输出
-/baoyu-danger-x-to-markdown https://x.com/username/status/123456 --json
+/danger-x-to-markdown https://x.com/username/status/123456 --json
 
 # 下载媒体文件（图片/视频）到本地
-/baoyu-danger-x-to-markdown https://x.com/username/status/123456 --download-media
+/danger-x-to-markdown https://x.com/username/status/123456 --download-media
 ```
 
 **支持的 URL：**
@@ -903,25 +905,25 @@ AI 驱动的生成后端。
 
 **身份验证：** 使用环境变量（`X_AUTH_TOKEN`、`X_CT0`）或 Chrome 登录进行 cookie 认证。
 
-#### baoyu-compress-image
+#### compress-image
 
 压缩图片以减小文件大小，同时保持质量。
 
 ```bash
-/baoyu-compress-image path/to/image.png
-/baoyu-compress-image path/to/images/ --quality 80
+/compress-image path/to/image.png
+/compress-image path/to/images/ --quality 80
 ```
 
-#### baoyu-format-markdown
+#### format-markdown
 
 格式化纯文本或 Markdown 文件，添加 frontmatter、标题、摘要、层级标题、加粗、列表和代码块。
 
 ```bash
 # 格式化 markdown 文件
-/baoyu-format-markdown path/to/article.md
+/format-markdown path/to/article.md
 
 # 格式化指定文件
-/baoyu-format-markdown path/to/draft.md
+/format-markdown path/to/draft.md
 ```
 
 **工作流程**：
@@ -949,22 +951,22 @@ AI 驱动的生成后端。
 | 代码/命令 | `` `行内` `` 或 ` ```代码块``` ` |
 | 引用 | `>` 引用块 |
 
-#### baoyu-markdown-to-html
+#### markdown-to-html
 
 将 Markdown 文件转换为样式化 HTML，支持微信公众号兼容主题、代码高亮，以及可选的外链底部引用。
 
 ```bash
 # 基础转换
-/baoyu-markdown-to-html article.md
+/markdown-to-html article.md
 
 # 主题 + 颜色
-/baoyu-markdown-to-html article.md --theme grace --color red
+/markdown-to-html article.md --theme grace --color red
 
 # 将普通外链转换为文末引用
-/baoyu-markdown-to-html article.md --cite
+/markdown-to-html article.md --cite
 ```
 
-#### baoyu-translate
+#### translate
 
 三模式翻译技能：快速（直接翻译）、标准（分析后翻译）、精翻（完整出版级工作流，含审校与润色）。
 
@@ -1049,19 +1051,19 @@ AI 驱动的生成后端。
 部分技能需要 API 密钥或自定义配置。环境变量可以在 `.env` 文件中设置：
 
 **加载优先级**（高优先级覆盖低优先级）：
-1. 命令行环境变量（如 `OPENAI_API_KEY=xxx /baoyu-imagine ...`）
+1. 命令行环境变量（如 `OPENAI_API_KEY=xxx /imagine ...`）
 2. `process.env`（系统环境变量）
-3. `<cwd>/.baoyu-skills/.env`（项目级）
-4. `~/.baoyu-skills/.env`（用户级）
+3. `<cwd>/.supercreator/.env`（项目级）
+4. `~/.supercreator/.env`（用户级）
 
 **配置方法**：
 
 ```bash
 # 创建用户级配置目录
-mkdir -p ~/.baoyu-skills
+mkdir -p ~/.supercreator
 
 # 创建 .env 文件
-cat > ~/.baoyu-skills/.env << 'EOF'
+cat > ~/.supercreator/.env << 'EOF'
 # OpenAI
 OPENAI_API_KEY=sk-xxx
 OPENAI_IMAGE_MODEL=gpt-image-1.5
@@ -1118,9 +1120,9 @@ EOF
 **项目级配置**（团队共享）：
 
 ```bash
-mkdir -p .baoyu-skills
-# 将 .baoyu-skills/.env 添加到 .gitignore 避免提交密钥
-echo ".baoyu-skills/.env" >> .gitignore
+mkdir -p .supercreator
+# 将 .supercreator/.env 添加到 .gitignore 避免提交密钥
+echo ".supercreator/.env" >> .gitignore
 ```
 
 ## 自定义扩展
@@ -1128,16 +1130,16 @@ echo ".baoyu-skills/.env" >> .gitignore
 所有技能支持通过 `EXTEND.md` 文件自定义。创建扩展文件可覆盖默认样式、添加自定义配置或定义个人预设。
 
 **扩展路径**（按优先级检查）：
-1. `.baoyu-skills/<skill-name>/EXTEND.md` - 项目级（团队/项目特定设置）
-2. `~/.baoyu-skills/<skill-name>/EXTEND.md` - 用户级（个人偏好设置）
+1. `.supercreator/<skill-name>/EXTEND.md` - 项目级（团队/项目特定设置）
+2. `~/.supercreator/<skill-name>/EXTEND.md` - 用户级（个人偏好设置）
 
-**示例**：为 `baoyu-cover-image` 自定义品牌配色：
+**示例**：为 `cover-image` 自定义品牌配色：
 
 ```bash
-mkdir -p .baoyu-skills/baoyu-cover-image
+mkdir -p .supercreator/cover-image
 ```
 
-然后创建 `.baoyu-skills/baoyu-cover-image/EXTEND.md`：
+然后创建 `.supercreator/cover-image/EXTEND.md`：
 
 ```markdown
 ## 自定义配色
@@ -1154,7 +1156,7 @@ mkdir -p .baoyu-skills/baoyu-cover-image
 
 ## 免责声明
 
-### baoyu-danger-gemini-web
+### danger-gemini-web
 
 此技能使用 Gemini Web API（逆向工程）。
 
@@ -1169,10 +1171,10 @@ mkdir -p .baoyu-skills/baoyu-cover-image
 **代理配置**：如果需要通过代理访问 Google 服务（如中国大陆用户），请在命令前设置环境变量：
 
 ```bash
-HTTP_PROXY=http://127.0.0.1:7890 HTTPS_PROXY=http://127.0.0.1:7890 /baoyu-danger-gemini-web "你好"
+HTTP_PROXY=http://127.0.0.1:7890 HTTPS_PROXY=http://127.0.0.1:7890 /danger-gemini-web "你好"
 ```
 
-### baoyu-danger-x-to-markdown
+### danger-x-to-markdown
 
 此技能使用逆向工程的 X (Twitter) API。
 
@@ -1198,4 +1200,4 @@ MIT
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=JimLiu/baoyu-skills&type=Date)](https://www.star-history.com/#JimLiu/baoyu-skills&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=hl85/supercreator&type=Date)](https://www.star-history.com/#hl85/supercreator&Date)

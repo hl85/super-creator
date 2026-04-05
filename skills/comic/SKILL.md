@@ -1,10 +1,10 @@
 ---
-name: baoyu-comic
+name: comic
 description: Knowledge comic creator supporting multiple art styles and tones. Creates original educational comics with detailed panel layouts and sequential image generation. Use when user asks to create "知识漫画", "教育漫画", "biography comic", "tutorial comic", or "Logicomix-style comic".
 version: 1.56.1
 metadata:
   openclaw:
-    homepage: https://github.com/JimLiu/baoyu-skills#baoyu-comic
+    homepage: https://github.com/hl85/supercreator
     requires:
       anyBins:
         - bun

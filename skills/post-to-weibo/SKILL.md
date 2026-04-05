@@ -1,10 +1,10 @@
 ---
-name: baoyu-post-to-weibo
+name: post-to-weibo
 description: Posts content to Weibo (微博). Supports regular posts with text, images, and videos, and headline articles (头条文章) with Markdown input via Chrome CDP. Use when user asks to "post to Weibo", "发微博", "发布微博", "publish to Weibo", "share on Weibo", "写微博", or "微博头条文章".
 version: 1.56.1
 metadata:
   openclaw:
-    homepage: https://github.com/JimLiu/baoyu-skills#baoyu-post-to-weibo
+    homepage: https://github.com/hl85/supercreator
     requires:
       anyBins:
         - bun
@@ -151,7 +151,7 @@ Unless the user explicitly specifies the post type:
 
 ### Chrome debug port not ready
 
-If a script fails with `Chrome debug port not ready` or `Unable to connect`, kill only the CDP Chrome instances (those with `--remote-debugging-port` AND the baoyu-skills profile), then retry:
+If a script fails with `Chrome debug port not ready` or `Unable to connect`, kill only the CDP Chrome instances (those with `--remote-debugging-port` AND the supercreator profile), then retry:
 
 ```bash
 pkill -f "remote-debugging-port.*supercreator/chrome-profile" 2>/dev/null; sleep 2

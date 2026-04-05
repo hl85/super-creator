@@ -1,10 +1,10 @@
 ---
-name: baoyu-xhs-images
+name: xhs-images
 description: Generates Xiaohongshu (Little Red Book) infographic series with 11 visual styles and 8 layouts. Breaks content into 1-10 cartoon-style images optimized for XHS engagement. Use when user mentions "小红书图片", "XHS images", "RedNote infographics", "小红书种草", or wants social media infographics for Chinese platforms.
 version: 1.56.1
 metadata:
   openclaw:
-    homepage: https://github.com/JimLiu/baoyu-skills#baoyu-xhs-images
+    homepage: https://github.com/hl85/supercreator
 ---
 
 # Xiaohongshu Infographic Series Generator

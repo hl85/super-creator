@@ -20,13 +20,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JimLiu/baoyu-skills.git",
+    "url": "git+https://github.com/hl85/supercreator.git",
     "directory": "packages/sc-fetch"
   },
   "bugs": {
-    "url": "https://github.com/JimLiu/baoyu-skills/issues"
+    "url": "https://github.com/hl85/supercreator/issues"
   },
-  "homepage": "https://github.com/JimLiu/baoyu-skills/tree/main/packages/sc-fetch#readme",
+  "homepage": "https://github.com/hl85/supercreator/tree/main/packages/sc-fetch#readme",
   "publishConfig": {
     "access": "public"
   },

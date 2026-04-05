@@ -1,5 +1,5 @@
 {
-  "name": "baoyu-post-to-weibo-scripts",
+  "name": "post-to-weibo-scripts",
   "private": true,
   "type": "module",
   "dependencies": {

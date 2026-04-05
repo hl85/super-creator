@@ -1,10 +1,10 @@
 ---
-name: baoyu-danger-gemini-web
+name: danger-gemini-web
 description: Generates images and text via reverse-engineered Gemini Web API. Supports text generation, image generation from prompts, reference images for vision input, and multi-turn conversations. Use when other skills need image generation backend, or when user requests "generate image with Gemini", "Gemini text generation", or needs vision-capable AI generation.
 version: 1.56.1
 metadata:
   openclaw:
-    homepage: https://github.com/JimLiu/baoyu-skills#baoyu-danger-gemini-web
+    homepage: https://github.com/hl85/supercreator
     requires:
       anyBins:
         - bun
@@ -38,7 +38,7 @@ Before first use, verify user consent for reverse-engineered API usage.
 **Consent file locations**:
 - macOS: `~/Library/Application Support/supercreator/gemini-web/consent.json`
 - Linux: `~/.local/share/supercreator/gemini-web/consent.json`
-- Windows: `%APPDATA%\baoyu-skills\gemini-web\consent.json`
+- Windows: `%APPDATA%\supercreator\gemini-web\consent.json`
 
 **Flow**:
 1. Check if consent file exists with `accepted: true` and `disclaimerVersion: "1.0"`

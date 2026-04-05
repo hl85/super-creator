@@ -1,10 +1,10 @@
 ---
-name: baoyu-infographic
+name: infographic
 description: Generates professional infographics with 21 layout types and 20 visual styles. Analyzes content, recommends layout×style combinations, and generates publication-ready infographics. Use when user asks to create "infographic", "信息图", "visual summary", "可视化", or "高密度信息大图".
 version: 1.56.1
 metadata:
   openclaw:
-    homepage: https://github.com/JimLiu/baoyu-skills#baoyu-infographic
+    homepage: https://github.com/hl85/supercreator
 ---
 
 # Infographic Generator
