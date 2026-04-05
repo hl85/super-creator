@@ -1,6 +1,6 @@
 ---
 name: first-time-setup
-description: First-time setup flow for baoyu-comic preferences
+description: First-time setup flow for comic preferences
 ---
 
 # First-Time Setup
@@ -108,17 +108,17 @@ header: "Save"
 question: "Where to save preferences?"
 options:
   - label: "Project"
-    description: ".baoyu-skills/ (this project only)"
+    description: ".supercreator/ (this project only)"
   - label: "User"
-    description: "~/.baoyu-skills/ (all projects)"
+    description: "~/.supercreator/ (all projects)"
 ```
 
 ## Save Locations
 
 | Choice | Path | Scope |
 |--------|------|-------|
-| Project | `.baoyu-skills/baoyu-comic/EXTEND.md` | Current project |
-| User | `~/.baoyu-skills/baoyu-comic/EXTEND.md` | All projects |
+| Project | `.supercreator/comic/EXTEND.md` | Current project |
+| User | `~/.supercreator/comic/EXTEND.md` | All projects |
 
 ## After Setup
 

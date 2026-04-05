@@ -171,16 +171,15 @@ batch:
   });
 });
 
-test("loadExtendConfig ignores legacy EXTEND.md when the new path is missing", async () => {
+test("loadExtendConfig reads the imagine EXTEND.md path", async () => {
   const root = await makeTempDir("imagine-extend-");
   const cwd = path.join(root, "project");
   const home = path.join(root, "home");
-  const legacyPath = path.join(cwd, ".supercreator", "baoyu-image-gen", "EXTEND.md");
   const currentPath = path.join(cwd, ".supercreator", "imagine", "EXTEND.md");
 
-  await fs.mkdir(path.dirname(legacyPath), { recursive: true });
+  await fs.mkdir(path.dirname(currentPath), { recursive: true });
   await fs.mkdir(home, { recursive: true });
-  await fs.writeFile(legacyPath, `---
+  await fs.writeFile(currentPath, `---
 default_provider: google
 default_quality: 2k
 ---
@@ -188,39 +187,40 @@ default_quality: 2k
 
   const config = await loadExtendConfig(cwd, home);
 
-  assert.deepEqual(config, {});
-  await assert.rejects(() => fs.access(currentPath));
-  await fs.access(legacyPath);
+  assert.deepEqual(config, {
+    default_provider: "google",
+    default_quality: "2k",
+  });
+  await fs.access(currentPath);
 });
 
-test("loadExtendConfig leaves legacy EXTEND.md untouched when both paths exist", async () => {
+test("loadExtendConfig prefers project imagine EXTEND.md over home imagine EXTEND.md", async () => {
   const root = await makeTempDir("imagine-extend-dual-");
   const cwd = path.join(root, "project");
   const home = path.join(root, "home");
-  const legacyPath = path.join(cwd, ".supercreator", "baoyu-image-gen", "EXTEND.md");
   const currentPath = path.join(cwd, ".supercreator", "imagine", "EXTEND.md");
+  const homePath = path.join(home, ".supercreator", "imagine", "EXTEND.md");
 
-  await fs.mkdir(path.dirname(legacyPath), { recursive: true });
   await fs.mkdir(path.dirname(currentPath), { recursive: true });
-  await fs.mkdir(home, { recursive: true });
-  await fs.writeFile(legacyPath, `---
-default_provider: google
----
-`);
+  await fs.mkdir(path.dirname(homePath), { recursive: true });
   await fs.writeFile(currentPath, `---
 default_provider: openai
+---
+`);
+  await fs.writeFile(homePath, `---
+default_provider: google
 ---
 `);
 
   const config = await loadExtendConfig(cwd, home);
 
   assert.equal(config.default_provider, "openai");
-  assert.equal(await fs.readFile(legacyPath, "utf8"), `---
-default_provider: google
----
-`);
   assert.equal(await fs.readFile(currentPath, "utf8"), `---
 default_provider: openai
+---
+`);
+  assert.equal(await fs.readFile(homePath, "utf8"), `---
+default_provider: google
 ---
 `);
 });

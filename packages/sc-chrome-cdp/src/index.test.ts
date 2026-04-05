@@ -159,7 +159,7 @@ test("getFreePort honors a fixed environment override and otherwise allocates a 
 });
 
 test("findChromeExecutable prefers env overrides and falls back to candidate paths", async (t) => {
-  const root = await makeTempDir("baoyu-chrome-bin-");
+  const root = await makeTempDir("sc-chrome-bin-");
   t.after(() => fs.rm(root, { recursive: true, force: true }));
 
   const envChrome = path.join(root, "env-chrome");
@@ -215,7 +215,7 @@ test("resolveSharedChromeProfileDir supports env overrides, WSL paths, and defau
 });
 
 test("findExistingChromeDebugPort reads DevToolsActivePort and validates it against a live endpoint", async (t) => {
-  const root = await makeTempDir("baoyu-cdp-profile-");
+  const root = await makeTempDir("sc-cdp-profile-");
   t.after(() => fs.rm(root, { recursive: true, force: true }));
 
   const port = await getFreePort();
@@ -229,7 +229,7 @@ test("findExistingChromeDebugPort reads DevToolsActivePort and validates it agai
 });
 
 test("discoverRunningChromeDebugPort reads DevToolsActivePort from the provided user-data dir", async (t) => {
-  const root = await makeTempDir("baoyu-cdp-user-data-");
+  const root = await makeTempDir("sc-cdp-user-data-");
   t.after(() => fs.rm(root, { recursive: true, force: true }));
 
   const port = await getFreePort();
@@ -254,7 +254,7 @@ test("discoverRunningChromeDebugPort ignores unrelated debugging processes", asy
     return;
   }
 
-  const root = await makeTempDir("baoyu-cdp-user-data-");
+  const root = await makeTempDir("sc-cdp-user-data-");
   t.after(() => fs.rm(root, { recursive: true, force: true }));
 
   const port = await getFreePort();

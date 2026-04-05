@@ -38,23 +38,23 @@ Check EXTEND.md existence (priority order):
 
 ```bash
 # macOS, Linux, WSL, Git Bash
-test -f .baoyu-skills/baoyu-comic/EXTEND.md && echo "project"
-test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/baoyu-comic/EXTEND.md" && echo "xdg"
-test -f "$HOME/.baoyu-skills/baoyu-comic/EXTEND.md" && echo "user"
+test -f .supercreator/comic/EXTEND.md && echo "project"
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/supercreator/comic/EXTEND.md" && echo "xdg"
+test -f "$HOME/.supercreator/comic/EXTEND.md" && echo "user"
 ```
 
 ```powershell
 # PowerShell (Windows)
-if (Test-Path .baoyu-skills/baoyu-comic/EXTEND.md) { "project" }
+if (Test-Path .supercreator/comic/EXTEND.md) { "project" }
 $xdg = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { "$HOME/.config" }
-if (Test-Path "$xdg/baoyu-skills/baoyu-comic/EXTEND.md") { "xdg" }
-if (Test-Path "$HOME/.baoyu-skills/baoyu-comic/EXTEND.md") { "user" }
+if (Test-Path "$xdg/supercreator/comic/EXTEND.md") { "xdg" }
+if (Test-Path "$HOME/.supercreator/comic/EXTEND.md") { "user" }
 ```
 
 | Path | Location |
 |------|----------|
-| `.baoyu-skills/baoyu-comic/EXTEND.md` | Project directory |
-| `$HOME/.baoyu-skills/baoyu-comic/EXTEND.md` | User home |
+| `.supercreator/comic/EXTEND.md` | Project directory |
+| `$HOME/.supercreator/comic/EXTEND.md` | User home |
 
 **When EXTEND.md Found** → Read, parse, **output summary to user**:
 
@@ -433,7 +433,7 @@ With confirmed prompts from Step 5/6:
 | Supports `--ref` | **Strategy A** | Pass `characters/characters.png` with EVERY page |
 | Does NOT support `--ref` | **Strategy B** | Prepend character descriptions to EVERY prompt |
 
-**Strategy A: Using `--ref` parameter** (e.g., baoyu-imagine)
+**Strategy A: Using `--ref` parameter** (e.g., imagine)
 
 - Read the chosen image generation skill's `SKILL.md`
 - Invoke that installed skill via its documented interface, not by calling its scripts directly

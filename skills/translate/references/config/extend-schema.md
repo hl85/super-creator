@@ -1,4 +1,4 @@
-# EXTEND.md Schema for baoyu-translate
+# EXTEND.md Schema for translate
 
 ## Format
 

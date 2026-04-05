@@ -18,7 +18,7 @@ Options to run specific parts of the workflow.
 Generate storyboard and characters without prompts or images:
 
 ```bash
-/baoyu-comic content.md --storyboard-only
+/comic content.md --storyboard-only
 ```
 
 **Workflow**: Steps 1-3 only (stop after storyboard + characters)
@@ -40,7 +40,7 @@ Generate storyboard and characters without prompts or images:
 Generate storyboard, characters, and prompts without images:
 
 ```bash
-/baoyu-comic content.md --prompts-only
+/comic content.md --prompts-only
 ```
 
 **Workflow**: Steps 1-5 (generate prompts, skip images)
@@ -63,7 +63,7 @@ Generate storyboard, characters, and prompts without images:
 Generate images from existing prompts (starts at Step 7):
 
 ```bash
-/baoyu-comic comic/topic-slug/ --images-only
+/comic comic/topic-slug/ --images-only
 ```
 
 **Workflow**: Skip to Step 7, then 8-9
@@ -91,13 +91,13 @@ Regenerate specific pages only:
 
 ```bash
 # Single page
-/baoyu-comic comic/topic-slug/ --regenerate 3
+/comic comic/topic-slug/ --regenerate 3
 
 # Multiple pages
-/baoyu-comic comic/topic-slug/ --regenerate 2,5,8
+/comic comic/topic-slug/ --regenerate 2,5,8
 
 # Cover page
-/baoyu-comic comic/topic-slug/ --regenerate 0
+/comic comic/topic-slug/ --regenerate 0
 ```
 
 **Workflow**:

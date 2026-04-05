@@ -1,8 +1,8 @@
-# baoyu-fetch
+# sc-fetch
 
 [English](./README.md) | 简体中文 | [更新日志](./CHANGELOG.zh-CN.md) | [English Changelog](./CHANGELOG.md)
 
-`baoyu-fetch` 是一个基于 Chrome CDP 的 Bun CLI。输入 URL，它会输出高质量
+`sc-fetch` 是一个基于 Chrome CDP 的 Bun CLI。输入 URL，它会输出高质量
 `markdown` 或 `json`；命中站点 adapter 时优先消费 API 返回或页面内结构化
 数据，未命中时回退到通用 HTML 提取。
 
@@ -16,7 +16,7 @@
 - `stdout` 或 `--output` 输出 `markdown` / `json`
 - 可选下载提取出的图片/视频并重写 Markdown 链接
 - 提供登录/验证场景下的交互等待模式
-- Chrome profile 默认对齐 `baoyu-skills/chrome-profile`
+- Chrome profile 默认对齐 `supercreator/chrome-profile`
 
 ## 安装
 
@@ -27,13 +27,13 @@ bun install
 作为包使用时，推荐直接这样运行：
 
 ```bash
-bunx baoyu-fetch https://example.com
+bunx sc-fetch https://example.com
 ```
 
 也可以全局安装：
 
 ```bash
-npm install -g baoyu-fetch
+npm install -g sc-fetch
 ```
 
 npm 包发布的是 TypeScript 源码入口，不包含预编译的 `dist`，所以运行时需要
@@ -43,21 +43,21 @@ Bun。
 
 ```bash
 bun run src/cli.ts https://example.com
-bunx baoyu-fetch https://example.com
-baoyu-fetch https://example.com
-baoyu-fetch https://example.com --format markdown --output article.md
-baoyu-fetch https://example.com --format markdown --output article.md --download-media
-baoyu-fetch https://x.com/jack/status/20 --format json --output article.json
-baoyu-fetch https://x.com/jack/status/20 --json
-baoyu-fetch https://x.com/jack/status/20 --wait-for interaction
-baoyu-fetch https://x.com/jack/status/20 --wait-for force
-baoyu-fetch https://x.com/jack/status/20 --chrome-profile-dir ~/Library/Application\\ Support/baoyu-skills/chrome-profile
+bunx sc-fetch https://example.com
+sc-fetch https://example.com
+sc-fetch https://example.com --format markdown --output article.md
+sc-fetch https://example.com --format markdown --output article.md --download-media
+sc-fetch https://x.com/jack/status/20 --format json --output article.json
+sc-fetch https://x.com/jack/status/20 --json
+sc-fetch https://x.com/jack/status/20 --wait-for interaction
+sc-fetch https://x.com/jack/status/20 --wait-for force
+sc-fetch https://x.com/jack/status/20 --chrome-profile-dir ~/Library/Application\\ Support/supercreator/chrome-profile
 ```
 
 ## 主要参数
 
 ```bash
-baoyu-fetch <url> [options]
+sc-fetch <url> [options]
 
 Options:
   --output <file>       保存输出内容到文件

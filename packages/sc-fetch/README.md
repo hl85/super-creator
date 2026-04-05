@@ -1,8 +1,8 @@
-# baoyu-fetch
+# sc-fetch
 
 English | [简体中文](./README.zh-CN.md) | [Changelog](./CHANGELOG.md) | [中文更新日志](./CHANGELOG.zh-CN.md)
 
-`baoyu-fetch` is a Bun CLI built on Chrome CDP. Give it a URL and it returns
+`sc-fetch` is a Bun CLI built on Chrome CDP. Give it a URL and it returns
 high-quality `markdown` or `json`. When a site adapter matches, it prefers API
 responses or structured page data; otherwise it falls back to generic HTML
 extraction.
@@ -17,7 +17,7 @@ extraction.
 - Print `markdown` / `json` to stdout or save with `--output`
 - Optionally download extracted images or videos and rewrite Markdown links
 - Optional wait modes for login and verification flows
-- Chrome profile defaults to `baoyu-skills/chrome-profile`
+- Chrome profile defaults to `supercreator/chrome-profile`
 
 ## Installation
 
@@ -28,13 +28,13 @@ bun install
 For package usage, the quickest option is:
 
 ```bash
-bunx baoyu-fetch https://example.com
+bunx sc-fetch https://example.com
 ```
 
 You can also install it globally:
 
 ```bash
-npm install -g baoyu-fetch
+npm install -g sc-fetch
 ```
 
 The npm package ships TypeScript source entrypoints instead of a prebuilt
@@ -44,21 +44,21 @@ The npm package ships TypeScript source entrypoints instead of a prebuilt
 
 ```bash
 bun run src/cli.ts https://example.com
-bunx baoyu-fetch https://example.com
-baoyu-fetch https://example.com
-baoyu-fetch https://example.com --format markdown --output article.md
-baoyu-fetch https://example.com --format markdown --output article.md --download-media
-baoyu-fetch https://x.com/jack/status/20 --format json --output article.json
-baoyu-fetch https://x.com/jack/status/20 --json
-baoyu-fetch https://x.com/jack/status/20 --wait-for interaction
-baoyu-fetch https://x.com/jack/status/20 --wait-for force
-baoyu-fetch https://x.com/jack/status/20 --chrome-profile-dir ~/Library/Application\\ Support/baoyu-skills/chrome-profile
+bunx sc-fetch https://example.com
+sc-fetch https://example.com
+sc-fetch https://example.com --format markdown --output article.md
+sc-fetch https://example.com --format markdown --output article.md --download-media
+sc-fetch https://x.com/jack/status/20 --format json --output article.json
+sc-fetch https://x.com/jack/status/20 --json
+sc-fetch https://x.com/jack/status/20 --wait-for interaction
+sc-fetch https://x.com/jack/status/20 --wait-for force
+sc-fetch https://x.com/jack/status/20 --chrome-profile-dir ~/Library/Application\\ Support/supercreator/chrome-profile
 ```
 
 ## Options
 
 ```bash
-baoyu-fetch <url> [options]
+sc-fetch <url> [options]
 
 Options:
   --output <file>       Save output to file

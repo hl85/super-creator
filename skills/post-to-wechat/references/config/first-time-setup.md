@@ -1,6 +1,6 @@
 ---
 name: first-time-setup
-description: First-time setup flow for baoyu-post-to-wechat preferences
+description: First-time setup flow for post-to-wechat preferences
 ---
 
 # First-Time Setup
@@ -131,17 +131,17 @@ header: "Save"
 question: "Where to save preferences?"
 options:
   - label: "Project (Recommended)"
-    description: ".baoyu-skills/ (this project only)"
+    description: ".supercreator/ (this project only)"
   - label: "User"
-    description: "~/.baoyu-skills/ (all projects)"
+    description: "~/.supercreator/ (all projects)"
 ```
 
 ## Save Locations
 
 | Choice | Path | Scope |
 |--------|------|-------|
-| Project | `.baoyu-skills/baoyu-post-to-wechat/EXTEND.md` | Current project |
-| User | `~/.baoyu-skills/baoyu-post-to-wechat/EXTEND.md` | All projects |
+| Project | `.supercreator/post-to-wechat/EXTEND.md` | Current project |
+| User | `~/.supercreator/post-to-wechat/EXTEND.md` | All projects |
 
 ## After Setup
 
@@ -172,7 +172,7 @@ default_color: [preset name, hex, or empty for theme default]
 
 accounts:
   - name: [display name]
-    alias: [short key, e.g. "baoyu"]
+    alias: [short key, e.g. "main"]
     default: true
     default_publish_method: [api/browser]
     default_author: [author name]

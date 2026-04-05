@@ -1,6 +1,6 @@
 ---
 name: first-time-setup
-description: First-time setup flow for baoyu-danger-x-to-markdown preferences
+description: First-time setup flow for danger-x-to-markdown preferences
 ---
 
 # First-Time Setup
@@ -75,17 +75,17 @@ header: "Save"
 question: "Where to save preferences?"
 options:
   - label: "User (Recommended)"
-    description: "~/.baoyu-skills/ (all projects)"
+    description: "~/.supercreator/ (all projects)"
   - label: "Project"
-    description: ".baoyu-skills/ (this project only)"
+    description: ".supercreator/ (this project only)"
 ```
 
 ## Save Locations
 
 | Choice | Path | Scope |
 |--------|------|-------|
-| User | `~/.baoyu-skills/baoyu-danger-x-to-markdown/EXTEND.md` | All projects |
-| Project | `.baoyu-skills/baoyu-danger-x-to-markdown/EXTEND.md` | Current project |
+| User | `~/.supercreator/danger-x-to-markdown/EXTEND.md` | All projects |
+| Project | `.supercreator/danger-x-to-markdown/EXTEND.md` | Current project |
 
 ## After Setup
 

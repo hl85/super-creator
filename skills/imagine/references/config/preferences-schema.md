@@ -1,6 +1,6 @@
 ---
 name: preferences-schema
-description: EXTEND.md YAML schema for baoyu-imagine user preferences
+description: EXTEND.md YAML schema for imagine user preferences
 ---
 
 # Preferences Schema

@@ -1,6 +1,6 @@
 ---
 name: watermark-guide
-description: Watermark configuration guide for baoyu-cover-image
+description: Watermark configuration guide for cover-image
 ---
 
 # Watermark Guide

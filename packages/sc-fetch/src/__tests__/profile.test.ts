@@ -21,8 +21,8 @@ afterEach(() => {
 
 describe("resolveChromeProfileDir", () => {
   test("uses SC_CHROME_PROFILE_DIR when set", () => {
-    process.env.SC_CHROME_PROFILE_DIR = "/tmp/baoyu-profile";
-    expect(resolveChromeProfileDir()).toBe("/tmp/baoyu-profile");
+    process.env.SC_CHROME_PROFILE_DIR = "/tmp/sc-profile";
+    expect(resolveChromeProfileDir()).toBe("/tmp/sc-profile");
   });
 
   test("falls back to shared supercreator profile path", () => {

@@ -1,6 +1,6 @@
 ---
 name: first-time-setup
-description: First-time setup and default model selection flow for baoyu-imagine
+description: First-time setup and default model selection flow for imagine
 ---
 
 # First-Time Setup
@@ -138,17 +138,17 @@ header: "Save"
 question: "Where to save preferences?"
 options:
   - label: "Project (Recommended)"
-    description: ".baoyu-skills/ (this project only)"
+    description: ".supercreator/ (this project only)"
   - label: "User"
-    description: "~/.baoyu-skills/ (all projects)"
+    description: "~/.supercreator/ (all projects)"
 ```
 
 ### Save Locations
 
 | Choice | Path | Scope |
 |--------|------|-------|
-| Project | `.baoyu-skills/baoyu-imagine/EXTEND.md` | Current project |
-| User | `$HOME/.baoyu-skills/baoyu-imagine/EXTEND.md` | All projects |
+| Project | `.supercreator/imagine/EXTEND.md` | Current project |
+| User | `$HOME/.supercreator/imagine/EXTEND.md` | All projects |
 
 ### EXTEND.md Template
 
@@ -214,7 +214,7 @@ options:
 
 Notes for Azure setup:
 
-- In `baoyu-imagine`, Azure `--model` / `default_model.azure` should be the Azure deployment name, not just the underlying model family.
+- In `imagine`, Azure `--model` / `default_model.azure` should be the Azure deployment name, not just the underlying model family.
 - If the deployment name is custom, save that exact deployment name in `default_model.azure`.
 
 ### OpenRouter Model Selection
@@ -255,7 +255,7 @@ Notes for DashScope setup:
 
 - Prefer `qwen-image-2.0-pro` when the user needs custom `--size`, uncommon ratios like `21:9`, or strong Chinese/English text rendering.
 - `qwen-image-max` / `qwen-image-plus` / `qwen-image` only support five fixed sizes: `1664*928`, `1472*1104`, `1328*1328`, `1104*1472`, `928*1664`.
-- In `baoyu-imagine`, `quality` is a compatibility preset. It is not a native DashScope parameter.
+- In `imagine`, `quality` is a compatibility preset. It is not a native DashScope parameter.
 
 ### Replicate Model Selection
 

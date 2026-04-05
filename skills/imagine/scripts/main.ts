@@ -480,11 +480,11 @@ function getExtendConfigPathPairs(cwd: string, home: string): ExtendConfigPathPa
   return [
     {
       current: path.join(cwd, ".supercreator", "imagine", "EXTEND.md"),
-      legacy: path.join(cwd, ".supercreator", "baoyu-image-gen", "EXTEND.md"),
+      legacy: path.join(cwd, ".supercreator", "imagine", "EXTEND.md"),
     },
     {
       current: path.join(home, ".supercreator", "imagine", "EXTEND.md"),
-      legacy: path.join(home, ".supercreator", "baoyu-image-gen", "EXTEND.md"),
+      legacy: path.join(home, ".supercreator", "imagine", "EXTEND.md"),
     },
   ];
 }

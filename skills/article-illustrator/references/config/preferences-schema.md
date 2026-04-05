@@ -1,6 +1,6 @@
 ---
 name: preferences-schema
-description: EXTEND.md YAML schema for baoyu-article-illustrator user preferences
+description: EXTEND.md YAML schema for article-illustrator user preferences
 ---
 
 # Preferences Schema

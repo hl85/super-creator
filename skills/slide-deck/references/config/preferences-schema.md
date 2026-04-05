@@ -1,6 +1,6 @@
 # EXTEND.md Schema
 
-Structure for user preferences in `.baoyu-skills/baoyu-slide-deck/EXTEND.md`.
+Structure for user preferences in `.supercreator/slide-deck/EXTEND.md`.
 
 ## Full Schema
 
@@ -66,7 +66,7 @@ custom_styles:
     description: "Optional description"
 ```
 
-Then use with: `/baoyu-slide-deck content.md --style style-name`
+Then use with: `/slide-deck content.md --style style-name`
 
 ## Minimal Examples
 
@@ -109,8 +109,8 @@ custom_styles:
 
 Priority order (first found wins):
 
-1. `.baoyu-skills/baoyu-slide-deck/EXTEND.md` (project)
-2. `$HOME/.baoyu-skills/baoyu-slide-deck/EXTEND.md` (user)
+1. `.supercreator/slide-deck/EXTEND.md` (project)
+2. `$HOME/.supercreator/slide-deck/EXTEND.md` (user)
 
 ## First-Time Setup
 

@@ -1,6 +1,6 @@
 ---
 name: first-time-setup
-description: First-time setup flow for baoyu-translate preferences
+description: First-time setup flow for translate preferences
 ---
 
 # First-Time Setup
@@ -127,17 +127,17 @@ header: "Save"
 question: "Where to save preferences?"
 options:
   - label: "User (Recommended)"
-    description: "$HOME/.baoyu-skills/ (all projects)"
+    description: "$HOME/.supercreator/ (all projects)"
   - label: "Project"
-    description: ".baoyu-skills/ (this project only)"
+    description: ".supercreator/ (this project only)"
 ```
 
 ## Save Locations
 
 | Choice | Path | Scope |
 |--------|------|-------|
-| User | `$HOME/.baoyu-skills/baoyu-translate/EXTEND.md` | All projects |
-| Project | `.baoyu-skills/baoyu-translate/EXTEND.md` | Current project |
+| User | `$HOME/.supercreator/translate/EXTEND.md` | All projects |
+| Project | `.supercreator/translate/EXTEND.md` | Current project |
 
 ## After Setup
 

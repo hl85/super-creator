@@ -4,22 +4,22 @@
 
 ```bash
 # Auto-select type and style based on content
-/baoyu-article-illustrator path/to/article.md
+/article-illustrator path/to/article.md
 
 # Specify type
-/baoyu-article-illustrator path/to/article.md --type infographic
+/article-illustrator path/to/article.md --type infographic
 
 # Specify style
-/baoyu-article-illustrator path/to/article.md --style blueprint
+/article-illustrator path/to/article.md --style blueprint
 
 # Combine type and style
-/baoyu-article-illustrator path/to/article.md --type flowchart --style notion
+/article-illustrator path/to/article.md --type flowchart --style notion
 
 # Specify density
-/baoyu-article-illustrator path/to/article.md --density rich
+/article-illustrator path/to/article.md --density rich
 
 # Direct content input (paste mode)
-/baoyu-article-illustrator
+/article-illustrator
 [paste content]
 ```
 
@@ -53,30 +53,30 @@ Configure in EXTEND.md: `default_output_dir: illustrations-subdir`
 
 **Technical article with data**:
 ```bash
-/baoyu-article-illustrator api-design.md --type infographic --style blueprint
+/article-illustrator api-design.md --type infographic --style blueprint
 ```
 
 **Same thing with preset**:
 ```bash
-/baoyu-article-illustrator api-design.md --preset tech-explainer
+/article-illustrator api-design.md --preset tech-explainer
 ```
 
 **Personal story**:
 ```bash
-/baoyu-article-illustrator journey.md --preset storytelling
+/article-illustrator journey.md --preset storytelling
 ```
 
 **Tutorial with steps**:
 ```bash
-/baoyu-article-illustrator how-to-deploy.md --preset tutorial --density rich
+/article-illustrator how-to-deploy.md --preset tutorial --density rich
 ```
 
 **Opinion article with poster style**:
 ```bash
-/baoyu-article-illustrator opinion.md --preset opinion-piece
+/article-illustrator opinion.md --preset opinion-piece
 ```
 
 **Preset with override**:
 ```bash
-/baoyu-article-illustrator article.md --preset tech-explainer --style notion
+/article-illustrator article.md --preset tech-explainer --style notion
 ```
