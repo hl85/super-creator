@@ -1,16 +1,16 @@
-# Style Maintenance (baoyu-comic)
+# Style Maintenance (comic)
 
 ## Adding a New Style
 
-1. Create style definition: `skills/baoyu-comic/references/styles/<style-name>.md`
+1. Create style definition: `skills/comic/references/styles/<style-name>.md`
 2. Update SKILL.md: add to `--style` options table + auto-selection entry
 3. Generate showcase image:
    ```bash
-   ${BUN_X} skills/baoyu-danger-gemini-web/scripts/main.ts \
+   ${BUN_X} skills/danger-gemini-web/scripts/main.ts \
      --prompt "A single comic book page in <style-name> style showing [scene]. Features: [characteristics]. 3:4 portrait aspect ratio comic page." \
      --image screenshots/comic-styles/<style-name>.png
    ```
-4. Compress: `${BUN_X} skills/baoyu-compress-image/scripts/main.ts screenshots/comic-styles/<style-name>.png`
+4. Compress: `${BUN_X} skills/compress-image/scripts/main.ts screenshots/comic-styles/<style-name>.png`
 5. Update both READMEs (`README.md` + `README.zh.md`): add style to options, description table, preview grid
 
 ## Updating an Existing Style

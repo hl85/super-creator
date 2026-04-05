@@ -7,7 +7,7 @@ Skills include `metadata.openclaw` in YAML front matter:
 ```yaml
 metadata:
   openclaw:
-    homepage: https://github.com/JimLiu/baoyu-skills#<skill-name>
+    homepage: https://github.com/hl85/supercreator#<skill-name>
     requires:          # only for skills with scripts
       anyBins:
         - bun
@@ -28,8 +28,8 @@ Release hooks are configured via `.releaserc.yml`. This repo does not stage a se
 `packages/` is the **only** source of truth. Never edit `skills/*/scripts/vendor/` directly.
 
 Current packages:
-- `baoyu-chrome-cdp` (Chrome CDP utilities), consumed by 6 skills (`baoyu-danger-gemini-web`, `baoyu-danger-x-to-markdown`, `baoyu-post-to-wechat`, `baoyu-post-to-weibo`, `baoyu-post-to-x`, `baoyu-url-to-markdown`)
-- `baoyu-md` (shared Markdown rendering and placeholder pipeline), consumed by 3 skills (`baoyu-markdown-to-html`, `baoyu-post-to-wechat`, `baoyu-post-to-weibo`)
+- `sc-chrome-cdp` (Chrome CDP utilities), consumed by 6 skills (`danger-gemini-web`, `danger-x-to-markdown`, `post-to-wechat`, `post-to-weibo`, `post-to-x`, `url-to-markdown`)
+- `sc-md` (shared Markdown rendering and placeholder pipeline), consumed by 3 skills (`markdown-to-html`, `post-to-wechat`, `post-to-weibo`)
 
 **How it works**: Sync script copies packages into each consuming skill's `vendor/` directory and rewrites dependency specs to `file:./vendor/<name>`. Vendor copies are committed to git, making skills self-contained.
 

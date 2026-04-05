@@ -6,7 +6,7 @@
 
 | Requirement | Details |
 |-------------|---------|
-| **Prefix** | All skills MUST use `baoyu-` prefix |
+| **Naming** | All skills MUST use descriptive names without a required prefix |
 | **name field** | Max 64 chars, lowercase letters/numbers/hyphens only, no "anthropic"/"claude" |
 | **description** | Max 1024 chars, third person, include what + when to use |
 | **SKILL.md body** | Keep under 500 lines; use `references/` for additional content |
@@ -16,12 +16,12 @@
 
 ```yaml
 ---
-name: baoyu-<name>
+name: <name>
 description: <Third-person description. What it does + when to use it.>
 version: <semver matching marketplace.json>
 metadata:
   openclaw:
-    homepage: https://github.com/JimLiu/baoyu-skills#baoyu-<name>
+    homepage: https://github.com/hl85/supercreator#<name>
     requires:          # include only if skill has scripts
       anyBins:
         - bun
@@ -31,16 +31,16 @@ metadata:
 
 ## Steps
 
-1. Create `skills/baoyu-<name>/SKILL.md` with YAML front matter
-2. Add TypeScript in `skills/baoyu-<name>/scripts/` (if applicable)
-3. Add prompt templates in `skills/baoyu-<name>/prompts/` if needed
-4. Register the skill in `.claude-plugin/marketplace.json` under the `baoyu-skills` plugin entry
+1. Create `skills/<name>/SKILL.md` with YAML front matter
+2. Add TypeScript in `skills/<name>/scripts/` (if applicable)
+3. Add prompt templates in `skills/<name>/prompts/` if needed
+4. Register the skill in `.claude-plugin/marketplace.json` under the `supercreator` plugin entry
 5. Add Script Directory section to SKILL.md if skill has scripts
 6. Add openclaw metadata to frontmatter
 
 ## Skill Grouping
 
-All skills are registered under the single `baoyu-skills` plugin. Use these logical groups when deciding where the skill should appear in the docs:
+All skills are registered under the single `supercreator` plugin. Use these logical groups when deciding where the skill should appear in the docs:
 
 | If your skill... | Use group |
 |------------------|-----------|
@@ -49,7 +49,7 @@ All skills are registered under the single `baoyu-skills` plugin. Use these logi
 | Provides AI generation backend | AI Generation Skills |
 | Converts or processes content | Utility Skills |
 
-If you add a new logical group, update the docs that present grouped skills, but keep the skill registered under the single `baoyu-skills` plugin entry.
+If you add a new logical group, update the docs that present grouped skills, but keep the skill registered under the single `supercreator` plugin entry.
 
 ## Writing Descriptions
 
@@ -89,7 +89,7 @@ Every SKILL.md with scripts MUST include:
 For skills with extensive content:
 
 ```
-skills/baoyu-example/
+skills/example/
 ├── SKILL.md              # Main instructions (<500 lines)
 ├── references/
 │   ├── styles.md         # Loaded as needed
@@ -113,16 +113,16 @@ Every SKILL.md MUST include EXTEND.md loading. Add as Step 1.1 (workflow skills)
 Check EXTEND.md existence (priority order):
 
 \`\`\`bash
-test -f .baoyu-skills/<skill-name>/EXTEND.md && echo "project"
-test -f "${XDG_CONFIG_HOME:-$HOME/.config}/baoyu-skills/<skill-name>/EXTEND.md" && echo "xdg"
-test -f "$HOME/.baoyu-skills/<skill-name>/EXTEND.md" && echo "user"
+test -f .supercreator/<skill-name>/EXTEND.md && echo "project"
+test -f "${XDG_CONFIG_HOME:-$HOME/.config}/supercreator/<skill-name>/EXTEND.md" && echo "xdg"
+test -f "$HOME/.supercreator/<skill-name>/EXTEND.md" && echo "user"
 \`\`\`
 
 | Path | Location |
 |------|----------|
-| `.baoyu-skills/<skill-name>/EXTEND.md` | Project directory |
-| `$XDG_CONFIG_HOME/baoyu-skills/<skill-name>/EXTEND.md` | XDG config (~/.config) |
-| `$HOME/.baoyu-skills/<skill-name>/EXTEND.md` | User home (legacy) |
+| `.supercreator/<skill-name>/EXTEND.md` | Project directory |
+| `$XDG_CONFIG_HOME/supercreator/<skill-name>/EXTEND.md` | XDG config (~/.config) |
+| `$HOME/.supercreator/<skill-name>/EXTEND.md` | User home (legacy) |
 
 | Result | Action |
 |--------|--------|
