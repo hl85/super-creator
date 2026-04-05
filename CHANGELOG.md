@@ -2,6 +2,19 @@
 
 English | [中文](./CHANGELOG.zh.md)
 
+## [Unreleased]
+
+### Changed
+- Renamed project from `baoyu-skills` to `supercreator` (forked from [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills))
+- Removed `baoyu-` prefix from all skill directories
+- Renamed workspace packages: `baoyu-md` → `sc-md`, `baoyu-fetch` → `sc-fetch`, `baoyu-chrome-cdp` → `sc-chrome-cdp`
+- Updated runtime config directory: `.baoyu-skills/` → `.supercreator/`
+- Updated environment variable prefix: `BAOYU_*` → `SC_*`
+- Deleted deprecated `baoyu-image-gen` skill
+
+### Removed
+- `baoyu-image-gen` (deprecated, migrated to `imagine`)
+
 ## 1.89.1 - 2026-04-01
 
 ### Features

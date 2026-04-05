@@ -2,6 +2,19 @@
 
 [English](./CHANGELOG.md) | 中文
 
+## [未发布]
+
+### 变更
+- 项目从 `baoyu-skills` 更名为 `supercreator`（Fork 自 [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills)）
+- 删除所有 skill 目录的 `baoyu-` 前缀
+- 重命名 workspace 包：`baoyu-md` → `sc-md`、`baoyu-fetch` → `sc-fetch`、`baoyu-chrome-cdp` → `sc-chrome-cdp`
+- 运行时配置目录：`.baoyu-skills/` → `.supercreator/`
+- 环境变量前缀：`BAOYU_*` → `SC_*`
+- 删除废弃的 `baoyu-image-gen` skill
+
+### 删除
+- `baoyu-image-gen`（已废弃，已迁移至 `imagine`）
+
 ## 1.89.1 - 2026-04-01
 
 ### 新功能
