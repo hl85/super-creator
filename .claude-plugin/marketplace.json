@@ -1,5 +1,5 @@
 {
-  "name": "baoyu-skills",
+  "name": "supercreator",
   "owner": {
     "name": "Jim Liu (宝玉)",
     "email": "junminliu@gmail.com"
@@ -10,29 +10,29 @@
   },
   "plugins": [
     {
-      "name": "baoyu-skills",
+      "name": "supercreator",
       "description": "Content generation, AI backends, and utility tools for daily work efficiency",
       "source": "./",
       "strict": true,
       "skills": [
-        "./skills/baoyu-article-illustrator",
-        "./skills/baoyu-comic",
-        "./skills/baoyu-compress-image",
-        "./skills/baoyu-cover-image",
-        "./skills/baoyu-danger-gemini-web",
-        "./skills/baoyu-danger-x-to-markdown",
-        "./skills/baoyu-format-markdown",
-        "./skills/baoyu-infographic",
-        "./skills/baoyu-imagine",
-        "./skills/baoyu-markdown-to-html",
-        "./skills/baoyu-post-to-weibo",
-        "./skills/baoyu-post-to-wechat",
-        "./skills/baoyu-post-to-x",
-        "./skills/baoyu-slide-deck",
-        "./skills/baoyu-translate",
-        "./skills/baoyu-url-to-markdown",
-        "./skills/baoyu-xhs-images",
-        "./skills/baoyu-youtube-transcript"
+        "./skills/article-illustrator",
+        "./skills/comic",
+        "./skills/compress-image",
+        "./skills/cover-image",
+        "./skills/danger-gemini-web",
+        "./skills/danger-x-to-markdown",
+        "./skills/format-markdown",
+        "./skills/infographic",
+        "./skills/imagine",
+        "./skills/markdown-to-html",
+        "./skills/post-to-weibo",
+        "./skills/post-to-wechat",
+        "./skills/post-to-x",
+        "./skills/slide-deck",
+        "./skills/translate",
+        "./skills/url-to-markdown",
+        "./skills/xhs-images",
+        "./skills/youtube-transcript"
       ]
     }
   ]
